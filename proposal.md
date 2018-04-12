@@ -1,7 +1,7 @@
-Kevin Jan A11981898
-Sally Lai Ieng U A12680517
-Hee Ro Chung A13007579
-Kate Wong A12750755
+Kevin Jan
+Sally Lai Ieng U
+Hee Ro Chung 
+Kate Wong 
 
 Build-A-Cat
 
