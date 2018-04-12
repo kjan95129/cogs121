@@ -8,7 +8,7 @@ custom facial feature dimensions) and we would recommend them a cat by
 displaying a picture of one of the cats that fit their ideal cat facial
 features.
 
-
+ This would be under the "discovery and recommendations" theme suggested on the project webpage.
 Dataset: www.kaggle.com/crawford/cat-dataset
 
 
