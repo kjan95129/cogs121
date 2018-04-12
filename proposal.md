@@ -18,7 +18,13 @@ Idea 2: World Happiness Levels
 
 
 
+We want to show how happy people are based on their location, but also show the other factors that determine these happiness levels compared to a "dystopia."
 
-
+Dataset: https://www.kaggle.com/unsdsn/world-happiness
 
 Idea 3: Schooling
+ and Happiness
+If families want to move somewhere, we want to show the correlation between happiness, schooling, life expectancy, and wealth based on the countries the families may be interested in.
+
+Dataset: https://www.kaggle.com/adamschroeder/schooling/data
+Dataset: https://www.kaggle.com/unsdsn/world-happiness
