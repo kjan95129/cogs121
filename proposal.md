@@ -24,6 +24,7 @@ Dataset: https://www.kaggle.com/unsdsn/world-happiness
 
 Idea 3: Schooling
  and Happiness
+
 If families want to move somewhere, we want to show the correlation between happiness, schooling, life expectancy, and wealth based on the countries the families may be interested in. It's very similar to idea 2, but it's geared to users who are families that are considering schools and overall well-being.
 
 Dataset: https://www.kaggle.com/adamschroeder/schooling/data
