@@ -24,3 +24,6 @@ Paper Prototype 1:
 
 
 Paper Prototype 2:
+![paperprototype2landing](pplanding2.png)
+![paperprototype2customize](ppcustomize2.png)
+![paperprototype2results](ppresults2.png)
