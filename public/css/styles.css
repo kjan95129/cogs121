@@ -1,0 +1,86 @@
+body{
+  background-color: #dcd4e8;
+}
+
+H1.a {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 100px;
+  padding: 15px;
+}
+
+.wrapper{
+	text-align: center;
+}
+
+.sliders{
+  text-align: right;
+}
+
+.button {
+  background-color: #53a9bc;
+  border: none;
+  color: black;
+  padding: 30px 32px;
+  text-align: center;
+  font-size: 50px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button:hover {opacity: 1}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 30%;
+    height: 10px;
+    border-radius: 5px;
+    background: #716c6c;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding-right: 20px;
+
+
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
