@@ -1,99 +1,46 @@
 <html>
 <head>
-	
-</head>
-<body>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<!--<link rel="stylesheet" href="css/materials.css"> -->
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
-
-
-
-<style>
-
-</style>
+</head>
 
 <body>
+	<div class="sliders">
 
-<div class="sliders">
-<h2>Eyes</h2>
+		<h2>Eyes</h2>
+		<div class="slidecontainer">
+			<input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
+			<p>Value: <span id="demo"></span></p>
+		</div>
 
-<div class="""slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
-  <p>Value: <span id="demo"></span></p>
-</div>
+		<h2>Ears</h2>
+		<div class="slidecontainer">
+			<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+			<p>Value: <span id="demo2"></span></p>
+		</div>
 
-<h2>Ears</h2>
+		<h2>Nose to mouth</h2>
+		<div class="slidecontainer">
+			<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+			<p>Value: <span id="demo3"></span></p>
+		</div>
+	</div>
 
-<div class="""slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
-  <p>Value: <span id="demo2"></span></p>
-</div>
+	<div >
+		<button class="button" align="center" onclick="doneButton();">Done</button>
+	</div>
 
-<h2>Nose to mouth</h2>
+	<div >
+		<button class="button" align="center" onclick="backButton();">Back</button>
+	</div>
 
-<div class="""slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
-  <p>Value: <span id="demo3"></span></p>
-</div>
-
-</div>
-
-<div >
-	<button class="button" align="center" onclick="doneButton(); ">Done</button>
-</div>
-
-<div >
-	<button class="button" align="center" onclick="backButton(); location.href='/index'">Back</button>
-</div>
-
-<script>
-
-function backButton(){
-	window.history.back();
-}
-
-function doneButton(){
-	window.location="results";
-}
-
-
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-
-var slider = document.getElementById("myRange2");
-var output = document.getElementById("demo2");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-
-var slider = document.getElementById("myRange3");
-var output = document.getElementById("demo3");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-
-
-
-</script>
-
-
+	<script src="js/customize.js"></script>
 </body>
 		
-		</html>
+</html>

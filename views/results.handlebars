@@ -1,9 +1,6 @@
 <html>
-<head>
-	
-</head>
 
-<body>
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -13,31 +10,18 @@
 	<!--<link rel="stylesheet" href="css/materials.css"> -->
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
+</head>
 
-
-<H1 class="a" p align="center">Are these your ideal cats?</H1>
-
-<div >
+<body>
+	<h1 class="a" p align="center">Are these your ideal cats?</h1>
 
 	<div >
-	<button class="button" align="center" onclick="doneButton(); ">Home</button>
-</div>
-	<button class="button" align="center" onclick="backButton(); location.href='/index'">Back</button>
-</div>
+		<button class="button" align="center" onclick="homeButton();">Home</button>
+		<button class="button" align="center" onclick="backButton();">Back</button>
+	</div>
 
-	</body>
+	<script src="js/results.js"></script>
 
-	<script>
-		
-function backButton(){
-	window.location="customize";
-}
-
-function doneButton(){
-	window.location="index";
-}
-
-
-	</script>
+</body>
 
 </html>
