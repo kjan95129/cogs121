@@ -3,6 +3,10 @@ function backButton(){
 }
 
 function doneButton(){
+	localStorage.setItem("eyes", "10");
+	localStorage.setItem("ears", "10");
+	localStorage.setItem("noseToMouth", "10");
+
 	window.location="results";
 }
 
