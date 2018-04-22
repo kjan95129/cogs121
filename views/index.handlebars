@@ -4,26 +4,27 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<!--<link rel="stylesheet" href="css/materials.css"> -->
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-	<h1 class="a" p align="center">Build-A-Cat</h1>
+	<h1 class="text-center title-text">Build-A-Cat</h1>
 
-	<img src="../views/cat.jpg" class="center" width="500" height="377">
-
-	<div class="wrapper">
-		<button class="button" align="center" onclick="startButton(); location.href='/customize'">Start now!</button>
+	<div class="text-center">
+		<div class="pulse1">
+			<img src="images/cat-logo.png" /> 
+		</div>
 	</div>
 
-	<script src="js/bootstrap.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/build.js"></script>
+	<!-- text-center, btn class are from boostrap css -->	
+	<div class="text-center">
+		<br/><br/>
+		<h3>Choose your desired cat specifications, and we'll find a cat for you!</h3><br/>
+		<button type="button" class="btn btn-primary" onclick="startButton(); location.href='/customize'">Start now!</button>
+	</div>
+
 	<script src="js/index.js"></script>
 </body>
 

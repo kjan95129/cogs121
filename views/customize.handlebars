@@ -1,46 +1,54 @@
 <html>
 <head>
+	<title>Build-A-Cat</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
+	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<!--<link rel="stylesheet" href="css/materials.css"> -->
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-	<div class="sliders">
 
-		<h2>Eyes</h2>
-		<div class="slidecontainer">
-			<input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
-			<p>Value: <span id="demo"></span></p>
+	<h1 class="text-center">Customize your cat!</h1>
+
+	<div class="customize-body">
+		<div class="col-lg-6 customize-cat">
+			<img src="images/cat1.png"/ width="400" height="400"> 
 		</div>
 
-		<h2>Ears</h2>
-		<div class="slidecontainer">
-			<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
-			<p>Value: <span id="demo2"></span></p>
-		</div>
+		<div class="col-lg-6 slidecontainer">
+			<h2>Eyes</h2>
+			<div>
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
+				<p>Value: <span id="demo"></span></p>
+			</div>
 
-		<h2>Nose to mouth</h2>
-		<div class="slidecontainer">
-			<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
-			<p>Value: <span id="demo3"></span></p>
+			<h2>Ears</h2>
+			<div>
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+				<p>Value: <span id="demo2"></span></p>
+			</div>
+
+			<h2>Nose to mouth</h2>
+			<div>
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+				<p>Value: <span id="demo3"></span></p>
+			</div>
+
+			<!-- text-center, btn class are from boostrap css -->
+			<div class="text-right customize-buttons">
+				<button type="button" class="btn btn-primary" onclick="doneButton();">Done</button>
+				<button type="button" class="btn btn-danger" onclick="backButton();">Back</button>
+			</div>
 		</div>
 	</div>
 
-	<div >
-		<button class="button" align="center" onclick="doneButton();">Done</button>
-	</div>
 
-	<div >
-		<button class="button" align="center" onclick="backButton();">Back</button>
-	</div>
 
 	<script src="js/customize.js"></script>
+	
 </body>
 		
 </html>

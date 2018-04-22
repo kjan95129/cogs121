@@ -1,66 +1,90 @@
-body{
-  background-color: #dcd4e8;
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Raleway');
+
+/************************* DEFAULT STYLES ************************/
+
+html{
+	font-family: 'Raleway', sans-serif;
 }
 
-H1.a {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 100px;
-  padding: 15px;
+body{	
+	background-color: #dcd4e8;
 }
 
-.wrapper{
-	text-align: center;
+h1{
+    font-family: 'Coming Soon', cursive;
+    font-size: 5vw;
+    padding-top: 3vw;
 }
 
-.sliders{
-  text-align: right;
+h2, h3, h4, h5, h6, p{
+    font-family: 'Raleway', sans-serif;
 }
 
-.button {
-  background-color: #53a9bc;
-  border: none;
-  color: black;
-  padding: 30px 32px;
-  text-align: center;
-  font-size: 50px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 8px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+.btn{
+    font-family: 'Raleway', sans-serif;
 }
 
-.button:hover {opacity: 1}
+.title-text{
+    font-size: 7vw;
+    padding-top: 3vw;
+}
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/************************* DEFAULT STYLES ************************/
 
+
+/************************* INDEX ********************************/
+
+.pulse1{
+    -webkit-animation: pulse1 1.5s linear infinite;
+    -moz-animation: pulse1 1.5s linear infinite;
+    animation: pulse1 1.5s linear infinite;    
+}
+
+@-moz-keyframes pulse1{
+    0% { -moz-transform: scale(1); opacity: 1; }
+    20% { -moz-transform: scale(.97); opacity: 1; }
+    40% { -moz-transform: scale(.94); opacity: 1; }
+    60% { -moz-transform: scale(.97); opacity: 1; }
+    100% { -moz-transform: scale(1); opacity: 1; }
+}
+
+@-webkit-keyframes pulse1 {
+    0% { -webkit-transform: scale(1); opacity: 1; }
+    20% { -webkit-transform: scale(.97); opacity: 1; }
+    40% { -webkit-transform: scale(.94); opacity: 1; }
+    60% { -webkit-transform: scale(.97); opacity: 1; }
+    100% { -webkit-transform: scale(1); opacity: 1; }
+}
+
+/************************* INDEX ********************************/
+
+
+
+/************************ CUSTOMIZE PAGE **************************/
+.customize-body{
+    padding-top: 5%;
+}
+
+.customize-cat{
+    padding-left: 15%;
 }
 
 
 .slidecontainer {
-    width: 100%;
+    padding-left: 5%;
 }
 
 .slider {
     -webkit-appearance: none;
-    width: 30%;
+    width: 80%;
     height: 10px;
     border-radius: 5px;
     background: #716c6c;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
-    transition: opacity .2s;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    padding-right: 20px;
-
-
+	transition: opacity .2s;
+	padding: 0 10px 0 10px;
 }
 
 .slider:hover {
@@ -69,7 +93,6 @@ H1.a {
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    appearance: none;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -84,3 +107,21 @@ H1.a {
     background: #4CAF50;
     cursor: pointer;
 }
+
+.slidecontainer .customize-buttons{
+    margin-right: 20%;
+}
+
+/************************ CUSTOMIZE PAGE **************************/
+
+
+
+/************************* MISC ******************************/
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/************************* MISC ******************************/
