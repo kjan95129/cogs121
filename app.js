@@ -27,6 +27,7 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // getters for routes
+app.get('/', index.view);
 app.get('/index', index.view);
 app.get('/customize', customize.view);
 app.get('/results', results.view);
