@@ -1,6 +1,6 @@
 Build-A-Cat
 
-Pull files
-CD to build-a-cat directory
-run "node app.js" 
-Project will run on "localhost:3000/index"
+1) Pull files
+2) CD to build-a-cat directory
+3) run "node app.js" 
+4) Project will run on "localhost:3000/index"
