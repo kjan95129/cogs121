@@ -15,10 +15,10 @@
     "express": "^3.21.2",
     "express3-handlebars": "*",
     "jquery": "^3.3.1",
-    "mongodb": "*",
+    "mongodb": "^3.0.7",
     "mongoose": "*"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "6.9.x"
   }
 }
