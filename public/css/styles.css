@@ -40,7 +40,7 @@ h2, h3, h4, h5, h6, p{
     animation: pulse1 1.5s linear infinite;    
 }
 
-@-moz-keyframes pulse1{
+@keyframes pulse1{
     0% { -moz-transform: scale(1); opacity: 1; }
     20% { -moz-transform: scale(.97); opacity: 1; }
     40% { -moz-transform: scale(.94); opacity: 1; }
@@ -48,7 +48,7 @@ h2, h3, h4, h5, h6, p{
     100% { -moz-transform: scale(1); opacity: 1; }
 }
 
-@-webkit-keyframes pulse1 {
+@keyframes pulse1 {
     0% { -webkit-transform: scale(1); opacity: 1; }
     20% { -webkit-transform: scale(.97); opacity: 1; }
     40% { -webkit-transform: scale(.94); opacity: 1; }
