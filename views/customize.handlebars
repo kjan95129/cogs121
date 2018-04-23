@@ -3,7 +3,7 @@
 	<title>Build-A-Cat</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -11,40 +11,52 @@
 
 <body>
 
-	<h1 class="text-center">Customize your cat!</h1>
+	<div id="customizePage">
+		<h1 class="text-center">Customize your cat!</h1>
 
-	<div class="customize-body">
-		<div class="col-lg-6 customize-cat">
-			<img src="images/cat1.png"/ width="400" height="400">
-		</div>
-
-		<div class="col-lg-6 slidecontainer">
-			<h2>Eyes</h2>
-			<div>
-				<input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
-				<p>Value: <span id="demo"></span></p>
+		<div class="customize-body">
+			<div class="col-lg-6 customize-cat">
+				<img src="images/cat1.png"/ width="400" height="400">
 			</div>
 
-			<h2>Ears</h2>
-			<div>
-				<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
-				<p>Value: <span id="demo2"></span></p>
-			</div>
+			<div class="col-lg-6 slidecontainer">
+				<h2>Eyes</h2>
+				<div>
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
+					<p>Value: <span id="demo"></span></p>
+				</div>
 
-			<h2>Nose to mouth</h2>
-			<div>
-				<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
-				<p>Value: <span id="demo3"></span></p>
-			</div>
+				<h2>Ears</h2>
+				<div>
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+					<p>Value: <span id="demo2"></span></p>
+				</div>
 
-			<!-- text-center, btn class are from boostrap css -->
-			<div class="text-right customize-buttons">
-				<button type="button" class="btn btn-primary" onclick="doneButton();">Done</button>
-				<button type="button" class="btn btn-danger" onclick="backButton();">Back</button>
+				<h2>Nose to mouth</h2>
+				<div>
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+					<p>Value: <span id="demo3"></span></p>
+				</div>
+
+				<!-- text-center, btn class are from boostrap css -->
+				<div class="text-right customize-buttons">
+					<button type="button" class="btn btn-primary" id="doneCustomize">Done</button>
+					<button type="button" class="btn btn-danger" id="backCustomize">Back</button>
+				</div>
 			</div>
 		</div>
 	</div>
 
+	<div id="resultsPage">
+		<h1 class="text-center">Are these your ideal cats?</h1>
+
+		<div id="catResults"></div>
+		<!-- text-center, btn class are from boostrap css -->
+		<div class="text-center">
+			<button type="button" class="btn btn-primary" id="homeResults">Home</button>
+			<button type="button" class="btn btn-danger" id="backResults">Back</button>
+		</div>
+	</div>
 
 
 	<script src="js/customize.js"></script>
