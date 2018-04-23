@@ -10,20 +10,20 @@ Kate Wong
 
 Storyboard 1:
 
-![storyboard1](storyboard1.jpg)
+![storyboard1](Wireframes/storyboard1.jpg)
 
 Storyboard 2:
 
-![storyboard2](storyboard2.jpg)
+![storyboard2](Wireframes/sstoryboard2.jpg)
 
 Paper Prototype 1:
-![paperprototype1landing](pplanding1.png)
-![paperprototype1customize](ppcustomize1.png)
-![paperprototype1help](pphelp1.png)
-![paperprototyperesults](ppresults1.png)
+![paperprototype1landing](Wireframes/spplanding1.png)
+![paperprototype1customize](Wireframes/sppcustomize1.png)
+![paperprototype1help](Wireframes/spphelp1.png)
+![paperprototyperesults](Wireframes/sppresults1.png)
 
 
 Paper Prototype 2:
-![paperprototype2landing](pplanding2.png)
-![paperprototype2customize](ppcustomize2.png)
-![paperprototype2results](ppresults2.png)
+![paperprototype2landing](Wireframes/spplanding2.png)
+![paperprototype2customize](Wireframes/sppcustomize2.png)
+![paperprototype2results](Wireframes/sppresults2.png)

@@ -10,7 +10,7 @@ Kate Wong
 UI Skeleton Webpages
 
 Landing Page:
-![Landing Page](landingPage.PNG)
+![Landing Page](UISkeleton/landingPage.PNG)
 
 The landing page is nearly identical to our first paper prototype. The simple skeleton of the webpage includes the
 app name at the top of the page, an image of a cat underneath the title, a description of what the app provides,
@@ -19,7 +19,7 @@ skeleton does not contain a help button yet. However, other than that, the UI sk
 had planned.
 
 Cat Personalization Page:
-![Second Page](secondPage.PNG)
+![Second Page](UISkeleton/secondPage.PNG)
 
 The cat customization page is again very similar to our first paper prototype. Like the prototype, we have an image
 of a cat on the left, and slider bars on the right that correspond to a cat's facial features that the user can use
@@ -31,8 +31,8 @@ the landing page.
 
 
 Cat Results Page:
-![Third Page Top](thirdPage.PNG)
-![Third Page Bottom](thirdPageBottom.PNG)
+![Third Page Top](UISkeleton/thirdPage.PNG)
+![Third Page Bottom](UISkeleton/thirdPageBottom.PNG)
 
 The last page, or the results page is also very similar to the first paper prototype. The layout of the page is
 the same as the resulting cat images are displayed like a gallery that the user can scroll through to see.
