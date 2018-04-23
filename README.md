@@ -5,4 +5,4 @@ Build-A-Cat
 3) run "node app.js" 
 4) Project will run on [localhost:3000/index]
 
-Live demo: [https://build-a-cat.herokuapp.com/]
+[Live demo](https://build-a-cat.herokuapp.com/)
