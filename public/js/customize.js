@@ -1,14 +1,7 @@
-function backButton(){
-	window.location="index";
-}
-
-function doneButton(){
-	localStorage.setItem("eyes", "10");
-	localStorage.setItem("ears", "10");
-	localStorage.setItem("noseToMouth", "10");
-
-	window.location="results";
-}
+let eyesApart = 0;
+let earsApart = 0;
+let noseToMouth = 0;
+let customizeOrResult = "customize";
 
 var slider1 = document.getElementById("myRange");
 var output1 = document.getElementById("demo");
@@ -33,3 +26,29 @@ output3.innerHTML = slider3.value;
 slider3.oninput = function() {
   output3.innerHTML = this.value;
 }
+
+$('#backCustomize').click(() => {
+	window.location="index";
+});
+
+$('#doneCustomize').click(() => {
+	eyesApart = 10; // for now, FIXME
+	earsApart = 10;
+	noseToMouth = 10;
+	document.getElementById('customizePage').style.display = "none";
+	document.getElementById('resultsPage').style.display = "block";
+});
+
+$('#homeResults').click(() => {
+	window.location="index";
+});
+
+$('#backResults').click(() => {
+	document.getElementById('customizePage').style.display = "block";
+	document.getElementById('resultsPage').style.display = "none";
+});
+
+$(document).ready(() => {
+	document.getElementById('resultsPage').style.display = "none";
+	console.log("ready function");
+});
