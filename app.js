@@ -36,7 +36,7 @@ app.get('/results', results.view);
 const fakeDatabase = {
   'Cat0': {photo: 'cat_data/00000001_000.jpg', annotation: 'cat_data/00000001_000.jpg.cat'},
   'Cat1': {photo: 'cat_data/00000001_005.jpg', annotation: 'cat_data/00000001_005.jpg.cat'},
-  'Cat2': {photo: 'cat_data/00000001_008.jps', annotation: 'cat_data/00000001_008.jpg.cat'},
+  'Cat2': {photo: 'cat_data/00000001_008.jpg', annotation: 'cat_data/00000001_008.jpg.cat'},
   'Cat3': {photo: 'cat_data/00000001_011.jpg', annotation: 'cat_data/00000001_011.jpg.cat'},
   'Cat4': {photo: 'cat_data/00000001_012.jpg', annotation: 'cat_data/00000001_012.jpg.cat'},
   'Cat5': {photo: 'cat_data/00000001_016.jpg', annotation: 'cat_data/00000001_016.jpg.cat'},
