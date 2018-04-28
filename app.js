@@ -14,6 +14,10 @@ const index = require('./routes/index');
 const customize = require('./routes/customize');
 const results = require('./routes/results');
 
+// sqlite dependencies
+const sqlite = require('sqlite3');
+const db = new sqlite3.Database('pets.db');
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
