@@ -16,7 +16,7 @@ const results = require('./routes/results');
 
 // sqlite dependencies
 const sqlite3 = require('sqlite3');
-const db = new sqlite3.Database('pets.db');
+const db = new sqlite3.Database('cats.db');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -36,36 +36,43 @@ app.get('/index', index.view);
 app.get('/customize', customize.view);
 app.get('/results', results.view);
 
-// fake database in memory
-const fakeDatabase = {
-  'Cat0': {photo: 'cat_data/00000001_000.jpg', annotation: 'cat_data/00000001_000.jpg.cat'},
-  'Cat1': {photo: 'cat_data/00000001_005.jpg', annotation: 'cat_data/00000001_005.jpg.cat'},
-  'Cat2': {photo: 'cat_data/00000001_008.jpg', annotation: 'cat_data/00000001_008.jpg.cat'},
-  'Cat3': {photo: 'cat_data/00000001_011.jpg', annotation: 'cat_data/00000001_011.jpg.cat'},
-  'Cat4': {photo: 'cat_data/00000001_012.jpg', annotation: 'cat_data/00000001_012.jpg.cat'},
-  'Cat5': {photo: 'cat_data/00000001_016.jpg', annotation: 'cat_data/00000001_016.jpg.cat'},
-  'Cat6': {photo: 'cat_data/00000001_017.jpg', annotation: 'cat_data/00000001_017.jpg.cat'}
-}
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true })); // hook up with your app
 
-// GET a list of all the cats
-app.get('/customize', (req, res) => {
-  const allCats = Object.keys(fakeDatabase);
-  console.log('allCats is: ', allCats);
-  res.send(allCats);
-});
-
-// GET photos for the cat specification
+// GET profile data for a cat
 app.get('/customize/:specs', (req, res) => {
-  const specsToLookup = req.params.specs; // matches ':specs'
-  // TODO, some calculations for similar cats
-  let cats = [fakeDatabase['Cat0'], fakeDatabase['Cat2'], fakeDatabase['Cat5']];
-  if (cats) {
-    res.send(cats);
-  } else {
-    res.send({});   // failed, so return empty object instead of undefined
-  }
+	const specsToLookup = req.params.specs; // matches ':specs' above
+	const specs_arr = specsToLookup.split('+');
+
+	const eyesSize = specs_arr[0];
+	const earsSize = specs_arr[1];
+	const nose_mouthSize = specs_arr[2];
+
+	// console.log("eyes: " + eyesSize);
+	// console.log("ears: " + earsSize);
+	// console.log("nose_mouth: " + nose_mouthSize);
+
+	// db.all() fetches all results from an SQL query into the 'rows' variable:
+	db.all(
+		'SELECT * FROM all_cats WHERE eyes=$eyes AND ears=$ears AND nose_mouth=$nose_mouth',
+		// parameters to SQL query:
+		{
+			$eyes: eyesSize,
+			$ears: earsSize,
+			$nose_mouth: nose_mouthSize,
+		},
+		// callback function to run when the query finishes:
+		(err, rows) => {
+			if (rows) {
+				res.send(rows);
+			} else {
+				res.send({}); // failed, so return an empty object instead of undefined
+			}
+		}
+	);
 });
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+
+http.createServer(app).listen(app.get('port'), function () {
+	console.log('Express server listening on port ' + app.get('port'));
 });

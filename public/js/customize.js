@@ -1,45 +1,72 @@
-let eyesApart = 0;
-let earsApart = 0;
-let noseToMouth = 0;
+let eyesApart = 'small';
+let earsApart = 'small';
+let nose_mouthApart = 'small';
 let customizeOrResult = "customize";
 let requestURL = '';
 
-var slider1 = document.getElementById("myRange");
-var output1 = document.getElementById("demo");
+const slider1 = document.getElementById("myRange");
+const output1 = document.getElementById("demo");
 output1.innerHTML = slider1.value;
 
-slider1.oninput = function() {
-  output1.innerHTML = this.value;
+slider1.oninput = function () {
+	output1.innerHTML = this.value;
+	if (this.value <= 33) {
+		eyesApart = 'small';
+	}
+	else if (this.value <= 67) {
+		eyesApart = 'medium';
+	}
+	else {
+		eyesApart = 'large';
+	}
+	console.log("eyes: " + eyesApart);
 }
 
-var slider2 = document.getElementById("myRange2");
-var output2 = document.getElementById("demo2");
+const slider2 = document.getElementById("myRange2");
+const output2 = document.getElementById("demo2");
 output2.innerHTML = slider2.value;
 
-slider2.oninput = function() {
-  output2.innerHTML = this.value;
+slider2.oninput = function () {
+	output2.innerHTML = this.value;
+	if (this.value <= 33) {
+		earsApart = 'small';
+	}
+	else if (this.value <= 67) {
+		earsApart = 'medium';
+	}
+	else {
+		earsApart = 'large';
+	}
+	console.log("ears: " + earsApart);
 }
 
-var slider3 = document.getElementById("myRange3");
-var output3 = document.getElementById("demo3");
+const slider3 = document.getElementById("myRange3");
+const output3 = document.getElementById("demo3");
 output3.innerHTML = slider3.value;
 
-slider3.oninput = function() {
-  output3.innerHTML = this.value;
+slider3.oninput = function () {
+	output3.innerHTML = this.value;
+	if (this.value <= 33) {
+		nose_mouthApart = 'small';
+	}
+	else if (this.value <= 67) {
+		nose_mouthApart = 'medium';
+	}
+	else {
+		nose_mouthApart = 'large';
+	}
+	console.log("nose_mouth: " + nose_mouthApart);
 }
 
 $('#backCustomize').click(() => {
-	window.location="index";
+	window.location = "index";
 });
 
 $('#doneCustomize').click(() => {
-	eyesApart = 10; // for now, FIXME
-	earsApart = 10;
-	noseToMouth = 10;
 
 	document.getElementById('customizePage').style.display = "none";
 	document.getElementById('resultsPage').style.display = "block";
-	requestURL = 'customize/' + eyesApart + '+' + earsApart + "+" + noseToMouth;
+	requestURL = 'customize/' + eyesApart + '+' + earsApart + '+' + nose_mouthApart;
 	console.log('making ajax request to:', requestURL);
 
 	$.ajax({
@@ -53,7 +80,7 @@ $('#doneCustomize').click(() => {
 			if (data.length >= 0) {
 				let dataToDisplay = '';
 				for (const e of data) {
-					dataToDisplay = dataToDisplay + "<div class='row'><img src='" + e.photo + "'/></div>";
+					dataToDisplay = dataToDisplay + "<div class='row'><img src='" + e.picture + "'/></div>";
 				}
 				document.getElementById('catResults').innerHTML = dataToDisplay;
 			} else {
@@ -65,7 +92,7 @@ $('#doneCustomize').click(() => {
 });
 
 $('#homeResults').click(() => {
-	window.location="index";
+	window.location = "index";
 });
 
 $('#backResults').click(() => {
