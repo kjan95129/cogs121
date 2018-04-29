@@ -15,7 +15,7 @@ const customize = require('./routes/customize');
 const results = require('./routes/results');
 
 // sqlite dependencies
-const sqlite = require('sqlite3');
+const sqlite3 = require('sqlite3');
 const db = new sqlite3.Database('pets.db');
 
 // all environments
