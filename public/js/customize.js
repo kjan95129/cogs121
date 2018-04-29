@@ -1,6 +1,6 @@
-let eyesApart = 'small';
-let earsApart = 'small';
-let nose_mouthApart = 'small';
+let eyesApart = 'medium';
+let earsApart = 'medium';
+let nose_mouthApart = 'medium';
 let customizeOrResult = "customize";
 let requestURL = '';
 
@@ -80,7 +80,7 @@ $('#doneCustomize').click(() => {
 			if (data.length >= 0) {
 				let dataToDisplay = '';
 				for (const e of data) {
-					dataToDisplay = dataToDisplay + "<div class='row'><img src='" + e.picture + "'/></div>";
+					dataToDisplay = dataToDisplay + "<div class='row'><img src='https://res.cloudinary.com/dczoi0wxt/image/upload/" + e.picture + "'/></div>";
 				}
 				document.getElementById('catResults').innerHTML = dataToDisplay;
 			} else {

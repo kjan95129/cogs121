@@ -19,9 +19,9 @@ db.serialize(() => {
     db.run("CREATE TABLE all_cats (id INTEGER PRIMARY KEY, eyes TEXT, ears TEXT, nose_mouth TEXT, picture TEXT)");
 
     // insert 3 rows of data:
-    db.run("INSERT INTO all_cats VALUES (NULL, 'small', 'small', 'small', 'cat_data/00000001_000.jpg')");
-    db.run("INSERT INTO all_cats VALUES (NULL, 'medium', 'medium', 'medium', 'cat_data/00000001_005.jpg')");
-    db.run("INSERT INTO all_cats VALUES (NULL, 'large', 'large', 'large', 'cat_data/00000001_008.jpg')");
+    db.run("INSERT INTO all_cats VALUES (NULL, 'small', 'small', 'small', '00000001_000.jpg')");
+    db.run("INSERT INTO all_cats VALUES (NULL, 'medium', 'medium', 'medium', '00000001_005.jpg')");
+    db.run("INSERT INTO all_cats VALUES (NULL, 'large', 'large', 'large', '00000001_008.jpg')");
 
     console.log('successfully created the all_cats table in pets.db');
 
