@@ -29,6 +29,7 @@ h2, h3, h4, h5, h6, p{
     padding-top: 3vw;
 }
 
+
 /************************* DEFAULT STYLES ************************/
 
 
@@ -111,6 +112,36 @@ h2, h3, h4, h5, h6, p{
 .slidecontainer .customize-buttons{
     margin-right: 20%;
 }
+
+/*.parent{
+    width:100px;
+    height:50px;
+    position:absolute;
+    z-index:0;
+}
+
+.inner{
+    position:absolute;
+    z-index:1;
+    bottom:0;
+    right:20px;
+} */
+
+/*
+.cat {
+  position: relative;
+  display: inline;
+  width: 30%
+  height: auto;
+}
+
+.imtip {
+  position: absolute;
+  bottom: 0px;
+  right: 80px;
+  width: 30%;
+  height: auto;
+} */
 
 /************************ CUSTOMIZE PAGE **************************/
 

@@ -3,23 +3,65 @@
 <head>
 	<title>Build-A-Cat</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
+	
+	
+<body>
 </head>
 
 <body>
+
+<div>
+<button class="w3-xlarge w3-circle pull-right" style="margin-right: 20px; padding: 10px 15px 10px 15px; background-color: #a09b9a; color: white;" data-toggle="modal" data-target="#myModal" >?</button>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Help! What do I do?</h4>
+        </div>
+        <div class="modal-body">
+          <p>Adjust the dot on the sliders to customize the distance between the cat's eyes, ears, and eyes to mouth. After you are finished, click "done" to find the cat matches based on your customization! <p> If you wish to make changes to your ideal cat, click the "back" button to go back to the customize page.</p> </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 	<div id="customizePage">
 		<h1 class="text-center">Customize your cat!</h1>
 
 		<div class="customize-body">
 
-			<div class="col-lg-6 customize-cat">
+			<div class="col-lg-6 customize-cat ">
 				<img src="images/cat1.png" / width="400" height="400">
-			</div>
+			<!--
+    		<div class="inner">
+    			<img src="images/cateye.png" />
+    		</div>
+    		-->
+	</div>
+
+
+
+	<!-- <div class="cat">
+  <img src="images/catface.png" class="col-lg-6 catface" width="2%" height="auto"/>
+  <img src="images/cateye.png" class="imtip" />
+</div> -->
+
 
 			<div class="col-lg-6 slidecontainer">
 				<h2>Eyes</h2>
@@ -38,7 +80,7 @@
 					</p>
 				</div>
 
-				<h2>Nose to mouth</h2>
+				<h2>Eyes to mouth</h2>
 				<div>
 					<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
 					<p>Value:
@@ -46,26 +88,28 @@
 					</p>
 				</div>
 
-				<!-- text-center, btn class are from boostrap css -->
+				<!-- text-center, btn class are from bootstrap css -->
 				<div class="text-right customize-buttons">
-					<button type="button" class="btn btn-primary" id="doneCustomize">Done</button>
+					<button type="button" class="btn btn-primary" id="doneCustomize" style="background-color: #77d68f">Done</button>
 					<button type="button" class="btn btn-danger" id="backCustomize">Back</button>
 				</div>
 			</div>
 
 		</div>
 	</div>
-
+	
 	<div id="resultsPage">
-		<h1 class="text-center">Are these your ideal cats?</h1>
+		 <h1 class="text-center">Are these your ideal cats?</h1> 
 
 		<div id="catResults"></div>
-		<!-- text-center, btn class are from boostrap css -->
+		<!--text-center, btn class are from boostrap css --> 
 		<div class="text-center">
 			<button type="button" class="btn btn-primary" id="homeResults">Home</button>
 			<button type="button" class="btn btn-danger" id="backResults">Back</button>
+
 		</div>
 	</div>
+</div>
 
 
 	<script src="js/customize.js"></script>
