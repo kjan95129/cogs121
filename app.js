@@ -64,7 +64,7 @@ app.get('/customize/:specs', (req, res) => {
 
 	// db.all() fetches all results from an SQL query into the 'rows' variable:
 	db.all(
-		'SELECT * FROM all_cats WHERE eyes BETWEEN $eyes1 AND $eyes2 AND ears BETWEEN $ears1 AND $ears2 AND nose_mouth BETWEEN $nose_mouth1 AND $nose_mouth2 LIMIT 10',
+		'SELECT * FROM all_cats WHERE eyes BETWEEN $eyes1 AND $eyes2 AND ears BETWEEN $ears1 AND $ears2 AND nose_mouth BETWEEN $nose_mouth1 AND $nose_mouth2 ORDER BY RANDOM() LIMIT 10',
 		// parameters to SQL query:
 		{
 			$eyes1: (max_eyes/10)*~~(eyesSize/10),
