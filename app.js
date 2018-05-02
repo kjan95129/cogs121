@@ -53,14 +53,14 @@ app.get('/customize/:specs', (req, res) => {
 	const earsSize = specs_arr[1];
 	const nose_mouthSize = specs_arr[2];
 
-	console.log("eyes1: " + (max_eyes/10)*~~(eyesSize/10));
-	console.log("eyes2: " + (max_eyes/10)*(~~(eyesSize/10)+1));
+	// console.log("eyes1: " + (max_eyes/10)*~~(eyesSize/10));
+	// console.log("eyes2: " + (max_eyes/10)*(~~(eyesSize/10)+1));
 
-	console.log("ears1: " + (max_ears/10)*~~(earsSize/10));
-	console.log("ears2: " + (max_ears/10)*(~~(earsSize/10)+1));
+	// console.log("ears1: " + (max_ears/10)*~~(earsSize/10));
+	// console.log("ears2: " + (max_ears/10)*(~~(earsSize/10)+1));
 
-	console.log("nose_mouth1: " + (max_nose_mouth/10)*~~(nose_mouthSize/10));
-	console.log("nose_mouth2: " + (max_nose_mouth/10)*(~~(nose_mouthSize/10)+1));
+	// console.log("nose_mouth1: " + (max_nose_mouth/10)*~~(nose_mouthSize/10));
+	// console.log("nose_mouth2: " + (max_nose_mouth/10)*(~~(nose_mouthSize/10)+1));
 
 	// db.all() fetches all results from an SQL query into the 'rows' variable:
 	db.all(
