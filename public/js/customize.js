@@ -1,60 +1,37 @@
-let eyesApart = 'medium';
-let earsApart = 'medium';
-let nose_mouthApart = 'medium';
-let customizeOrResult = "customize";
-let requestURL = '';
-
 const slider1 = document.getElementById("myRange");
 const output1 = document.getElementById("demo");
-output1.innerHTML = slider1.value;
-
-slider1.oninput = function () {
-	output1.innerHTML = this.value;
-	if (this.value <= 33) {
-		eyesApart = 'small';
-	}
-	else if (this.value <= 67) {
-		eyesApart = 'medium';
-	}
-	else {
-		eyesApart = 'large';
-	}
-	console.log("eyes: " + eyesApart);
-}
 
 const slider2 = document.getElementById("myRange2");
 const output2 = document.getElementById("demo2");
-output2.innerHTML = slider2.value;
-
-slider2.oninput = function () {
-	output2.innerHTML = this.value;
-	if (this.value <= 33) {
-		earsApart = 'small';
-	}
-	else if (this.value <= 67) {
-		earsApart = 'medium';
-	}
-	else {
-		earsApart = 'large';
-	}
-	console.log("ears: " + earsApart);
-}
 
 const slider3 = document.getElementById("myRange3");
 const output3 = document.getElementById("demo3");
-output3.innerHTML = slider3.value;
 
+let eyesApart = slider1.value;
+let earsApart = slider2.value;
+let nose_mouthApart = slider3.value;
+let customizeOrResult = "customize";
+let requestURL = '';
+
+
+output1.innerHTML = slider1.value;
+slider1.oninput = function () {
+	output1.innerHTML = this.value;
+	eyesApart = this.value;
+	console.log("eyes: " + eyesApart);
+}
+
+output2.innerHTML = slider2.value;
+slider2.oninput = function () {
+	output2.innerHTML = this.value;
+	earsApart = this.value;
+	console.log("ears: " + earsApart);
+}
+
+output3.innerHTML = slider3.value;
 slider3.oninput = function () {
 	output3.innerHTML = this.value;
-	if (this.value <= 33) {
-		nose_mouthApart = 'small';
-	}
-	else if (this.value <= 67) {
-		nose_mouthApart = 'medium';
-	}
-	else {
-		nose_mouthApart = 'large';
-	}
+	nose_mouthApart = this.value;
 	console.log("nose_mouth: " + nose_mouthApart);
 }
 
@@ -80,7 +57,7 @@ $('#doneCustomize').click(() => {
 			if (data.length >= 0) {
 				let dataToDisplay = '';
 				for (const e of data) {
-					dataToDisplay = dataToDisplay + "<div class='row'><img src='https://res.cloudinary.com/dczoi0wxt/image/upload/" + e.picture + "'/></div>";
+					dataToDisplay = dataToDisplay + "<div class='row'><img src='" + e.picture + "'/></div>";
 				}
 				document.getElementById('catResults').innerHTML = dataToDisplay;
 			} else {

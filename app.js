@@ -48,18 +48,26 @@ app.get('/customize/:specs', (req, res) => {
 	const earsSize = specs_arr[1];
 	const nose_mouthSize = specs_arr[2];
 
-	// console.log("eyes: " + eyesSize);
-	// console.log("ears: " + earsSize);
-	// console.log("nose_mouth: " + nose_mouthSize);
+	console.log("eyes1: " + (404.73818698/10)*~~(eyesSize/10));
+	console.log("eyes2: " + (404.73818698/10)*(~~(eyesSize/10)+1));
+
+	console.log("ears1: " + (1002.17563331/10)*~~(earsSize/10));
+	console.log("ears2: " + (1002.17563331/10)*(~~(earsSize/10)+1));
+
+	console.log("nose_mouth1: " + (1026.90992789/10)*~~(nose_mouthSize/10));
+	console.log("nose_mouth2: " + (1026.90992789/10)*(~~(nose_mouthSize/10)+1));
 
 	// db.all() fetches all results from an SQL query into the 'rows' variable:
 	db.all(
-		'SELECT * FROM all_cats WHERE eyes=$eyes AND ears=$ears AND nose_mouth=$nose_mouth',
+		'SELECT * FROM all_cats WHERE eyes BETWEEN $eyes1 AND $eyes2 AND ears BETWEEN $ears1 AND $ears2 AND nose_mouth BETWEEN $nose_mouth1 AND $nose_mouth2 LIMIT 10',
 		// parameters to SQL query:
 		{
-			$eyes: eyesSize,
-			$ears: earsSize,
-			$nose_mouth: nose_mouthSize,
+			$eyes1: (404.73818698/10)*~~(eyesSize/10),
+			$eyes2: (404.73818698/10)*(~~(eyesSize/10)+1),
+			$ears1: (1002.17563331/10)*~~(earsSize/10),
+			$ears2: (1002.17563331/10)*(~~(earsSize/10)+1),
+			$nose_mouth1: (1026.90992789/10)*~~(nose_mouthSize/10),
+			$nose_mouth2: (1026.90992789/10)*(~~(nose_mouthSize/10)+1)
 		},
 		// callback function to run when the query finishes:
 		(err, rows) => {
@@ -71,7 +79,6 @@ app.get('/customize/:specs', (req, res) => {
 		}
 	);
 });
-
 
 http.createServer(app).listen(app.get('port'), function () {
 	console.log('Express server listening on port ' + app.get('port'));
