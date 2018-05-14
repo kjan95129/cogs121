@@ -13,19 +13,50 @@ let nose_mouthApart = slider3.value;
 let customizeOrResult = "customize";
 let requestURL = '';
 
-
 output1.innerHTML = slider1.value;
 slider1.oninput = function () {
 	output1.innerHTML = this.value;
 	eyesApart = this.value;
 	console.log("eyes: " + eyesApart);
+
+
+let leftMove = -((eyesApart-10));
+let rightMove =((eyesApart-10));
+
+
+/*
+let move = 0;
+if (eyesApart >= 50){
+		move =-((eyesApart-10)/2);
+	}
+	else {
+	move =-((eyesApart-60)/3);
+	}
+	*/
+
+	document.getElementById("leftEyeball").style.marginLeft = leftMove;
+	document.getElementById("rightEyeball").style.marginLeft = rightMove;
+
+
+
+
+	//alert(document.getElementById("leftEyeball").style.margin);
+
+
+//	document.getElementById('leftEye').style.padding-right=10;
+
 }
+
+
 
 output2.innerHTML = slider2.value;
 slider2.oninput = function () {
 	output2.innerHTML = this.value;
 	earsApart = this.value;
 	console.log("ears: " + earsApart);
+
+
+
 }
 
 output3.innerHTML = slider3.value;
@@ -33,6 +64,18 @@ slider3.oninput = function () {
 	output3.innerHTML = this.value;
 	nose_mouthApart = this.value;
 	console.log("nose_mouth: " + nose_mouthApart);
+
+
+
+	let leftEyeDown = -((nose_mouthApart-10));
+	let rightEyeDown = -((nose_mouthApart-10)/15);
+	let mouthMove = ((nose_mouthApart));
+
+
+	document.getElementById("rightEyeball").style.marginTop =  rightEyeDown;
+	document.getElementById("leftEyeball").style.marginTop =  leftEyeDown;
+	document.getElementById("mouth").style.marginTop = mouthMove;
+
 }
 
 $('#backCustomize').click(() => {
