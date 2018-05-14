@@ -65,12 +65,12 @@ app.get('/customize/:specs', (req, res) => {
 		'SELECT * FROM all_cats WHERE eyes BETWEEN $eyes1 AND $eyes2 AND ears BETWEEN $ears1 AND $ears2 AND nose_mouth BETWEEN $nose_mouth1 AND $nose_mouth2 ORDER BY RANDOM() LIMIT 10',
 		// parameters to SQL query:
 		{
-			$eyes1: (max_eyes/10)*~~(eyesSize/10),
-			$eyes2: (max_eyes/10)*(~~(eyesSize/10)+1),
-			$ears1: (max_ears/10)*~~(earsSize/10),
-			$ears2: (max_ears/10)*(~~(earsSize/10)+1),
-			$nose_mouth1: (max_nose_mouth/10)*~~(nose_mouthSize/10),
-			$nose_mouth2: (max_nose_mouth/10)*(~~(nose_mouthSize/10)+1)
+			$eyes1: (max_eyes / 10) * ~~(eyesSize / 10),
+			$eyes2: (max_eyes / 10) * (~~(eyesSize / 10) + 1),
+			$ears1: (max_ears / 10) * ~~(earsSize / 10),
+			$ears2: (max_ears / 10) * (~~(earsSize / 10) + 1),
+			$nose_mouth1: (max_nose_mouth / 10) * ~~(nose_mouthSize / 10),
+			$nose_mouth2: (max_nose_mouth / 10) * (~~(nose_mouthSize / 10) + 1)
 		},
 		// callback function to run when the query finishes:
 		(err, rows) => {

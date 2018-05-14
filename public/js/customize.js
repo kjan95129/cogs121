@@ -14,6 +14,8 @@ let customizeOrResult = "customize";
 let requestURL = '';
 
 
+
+
 output1.innerHTML = slider1.value;
 slider1.oninput = function () {
 	output1.innerHTML = this.value;
@@ -56,10 +58,20 @@ $('#doneCustomize').click(() => {
 
 			if (data.length >= 0) {
 				let dataToDisplay = '';
+				let pictureCount = 0;
+
+				// loop through array of pictures
 				for (const e of data) {
-					dataToDisplay = dataToDisplay + "<div class='row'><img src='" + e.picture + "'/></div>";
+					pictureCount = pictureCount + 1;
+					dataToDisplay = "<img src='" + e.picture + "'/>";
+					if(pictureCount <= 5){
+						document.getElementById('catResults1').innerHTML += dataToDisplay;
+					}
+					else{
+						document.getElementById('catResults2').innerHTML += dataToDisplay;
+					}
 				}
-				document.getElementById('catResults').innerHTML = dataToDisplay;
+
 			} else {
 				console.log("Error: could not find cat at URL: ", requestURL);
 			}

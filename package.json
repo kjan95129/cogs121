@@ -12,6 +12,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "eslint": "^4.19.1",
     "express": "^3.21.2",
     "express3-handlebars": "*",
     "jquery": "^3.3.1",

@@ -30,7 +30,7 @@ h2, h3, h4, h5, h6, p{
 }
 
 
-/************************* DEFAULT STYLES ************************/
+/************************* END DEFAULT STYLES ************************/
 
 
 /************************* INDEX ********************************/
@@ -57,7 +57,7 @@ h2, h3, h4, h5, h6, p{
     100% { -webkit-transform: scale(1); opacity: 1; }
 }
 
-/************************* INDEX ********************************/
+/************************* END INDEX ********************************/
 
 
 
@@ -143,7 +143,36 @@ h2, h3, h4, h5, h6, p{
   height: auto;
 } */
 
-/************************ CUSTOMIZE PAGE **************************/
+/************************ END CUSTOMIZE PAGE **************************/
+
+/************************ CAT PICTURES PANEL *************************/
+
+.panel-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+/* Create two equal columns that sits next to each other */
+.panel-column {
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.panel-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.panel-column:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/************************ END CAT PICTURES PANEL *************************/
 
 
 
@@ -155,4 +184,4 @@ h2, h3, h4, h5, h6, p{
     margin-right: auto;
 }
 
-/************************* MISC ******************************/
+/************************* END MISC ******************************/
