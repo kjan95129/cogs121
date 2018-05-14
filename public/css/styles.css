@@ -67,7 +67,7 @@ h2, h3, h4, h5, h6, p{
 }
 
 .customize-cat{
-    padding-left: 15%;
+    padding-left: 8%;
 }
 
 
@@ -142,6 +142,48 @@ h2, h3, h4, h5, h6, p{
   width: 30%;
   height: auto;
 } */
+
+.catFace {
+    position: relative;
+    width: 35vw;
+    height: auto;
+    z-index: 1;
+}
+
+.leftEye {
+    position: relative;
+
+/*    bottom: -250px;
+    right: 1180px;*/
+    
+    width: 6vw;
+    height: auto;
+    right: -9vw;
+    bottom: 22vw ;
+    z-index: 2;
+/*    bottom: 10vw;
+    right: 55vw;*/
+  /*  margin: 2vh 1vw;*/
+
+}   
+
+.rightEye {
+    position: relative;
+    width: 6vw;
+    height: auto;
+    right: -20vw;
+    bottom: 28vw;
+    z-index: 2;
+} 
+
+.catMouth {
+    position: relative;
+    width: 30vw;
+    height: auto;
+    right: -2.3vw;
+    bottom: 41vw;
+    z-index: 2;
+} 
 
 /************************ END CUSTOMIZE PAGE **************************/
 
