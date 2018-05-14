@@ -83,8 +83,10 @@ $('#doneCustomize').click(() => {
 		success: (data) => {
 			console.log("received cat data, mwahaha", data);
 
+			document.getElementById('catResults1').innerHTML = '';
+			document.getElementById('catResults2').innerHTML = '';
+
 			if (data.length >= 0) {
-				let dataToDisplay = '';
 				let pictureCount = 0;
 
 				// loop through array of pictures
