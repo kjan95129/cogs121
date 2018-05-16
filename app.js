@@ -50,7 +50,7 @@ app.get('/customize/:specs', (req, res) => {
 	const eyesSize = specs_arr[0];
 	const earsSize = specs_arr[1];
 	const nose_mouthSize = specs_arr[2];
-	const color = 'black';
+	const color = specs_arr[3];
 
 	// console.log("eyes1: " + (max_eyes/10)*~~(eyesSize/10));
 	// console.log("eyes2: " + (max_eyes/10)*(~~(eyesSize/10)+1));
@@ -69,7 +69,6 @@ app.get('/customize/:specs', (req, res) => {
 	const nose_mouth1 = (max_nose_mouth / 10) * ~~(nose_mouthSize / 10);
 	const nose_mouth2 = (max_nose_mouth / 10) * (~~(nose_mouthSize / 10) + 1);
 
-	console.log("trying 3");
 	db.all(
 		'SELECT * FROM all_cats WHERE color=$color AND CAST(eyes as decimal) BETWEEN $eyes1 AND $eyes2 AND CAST(ears as decimal) BETWEEN $ears1 AND $ears2 AND CAST(nose_mouth as decimal) BETWEEN $nose_mouth1 AND $nose_mouth2 ORDER BY RANDOM() LIMIT 10',
 		// parameters to SQL query:
@@ -85,11 +84,10 @@ app.get('/customize/:specs', (req, res) => {
 		// callback function to run when the query finishes:
 		(err, rows) => {
 			if (rows.length != 0) {
-				console.log("sending 3");
+				console.log("sending color, eyes, ears, mouth");
 				res.send(rows);
 			}
 			else {
-				console.log("trying 2");
 				db.all(
 					'SELECT * FROM all_cats WHERE color=$color AND CAST(eyes as decimal) BETWEEN $eyes1 AND $eyes2 AND CAST(ears as decimal) BETWEEN $ears1 AND $ears2 ORDER BY RANDOM() LIMIT 10',
 					// parameters to SQL query:
@@ -103,11 +101,10 @@ app.get('/customize/:specs', (req, res) => {
 					// callback function to run when the query finishes:
 					(err, rows) => {
 						if (rows.length != 0) {
-							console.log("sending 2");
+							console.log("sending color, eyes, ears");
 							res.send(rows);
 						}
 						else {
-							console.log("trying 1");
 							db.all(
 								'SELECT * FROM all_cats WHERE color=$color AND CAST(eyes as decimal) BETWEEN $eyes1 AND $eyes2 ORDER BY RANDOM() LIMIT 10',
 								// parameters to SQL query:
@@ -119,11 +116,10 @@ app.get('/customize/:specs', (req, res) => {
 								// callback function to run when the query finishes:
 								(err, rows) => {
 									if (rows.length != 0) {
-										console.log("sending 1");
+										console.log("sending color, eyes");
 										res.send(rows);
 									}
 									else {
-										console.log("trying 0");
 										db.all(
 											'SELECT * FROM all_cats WHERE color=$color ORDER BY RANDOM() LIMIT 10',
 											// parameters to SQL query:
@@ -133,7 +129,7 @@ app.get('/customize/:specs', (req, res) => {
 											// callback function to run when the query finishes:
 											(err, rows) => {
 												if (rows.length != 0) {
-													console.log("sending 0");
+													console.log("sending color");
 													res.send(rows);
 												}
 												else {

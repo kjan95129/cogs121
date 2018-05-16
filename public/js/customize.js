@@ -12,7 +12,7 @@ let earsApart = slider2.value;
 let nose_mouthApart = slider3.value;
 let customizeOrResult = "customize";
 let requestURL = '';
-
+let color = 'black';
 
 
 
@@ -86,9 +86,10 @@ slider3.oninput = function () {
 
 // TODO 
 // UPDATE THIS COLOR VARIABLE BASED ON INPUT
-
-let color = 'black';
-
+updateColor = function(c){
+	color = c;
+	document.getElementById('colorName').innerHTML = color;
+}
 
 
 $('#backCustomize').click(() => {
