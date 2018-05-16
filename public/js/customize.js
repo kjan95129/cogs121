@@ -89,6 +89,25 @@ slider3.oninput = function () {
 updateColor = function(c){
 	color = c;
 	document.getElementById('colorName').innerHTML = color;
+	if(color == 'black'){
+		document.getElementById('face').src = "images/catface_black.png";
+	}
+	else if(color=='brown'){
+		console.log('in brown');
+		document.getElementById('face').src = "images/catface_brown.png";
+	}
+	else if(color=='dark grey'){
+		document.getElementById('face').src = "images/catface_darkgrey.png";
+	}
+	else if(color=='light grey'){
+		document.getElementById('face').src = "images/catface_lightgrey.png";
+	}
+	else if(color=='white'){
+		document.getElementById('face').src = "images/catface_white.png";
+	}
+	else if(color=='orange'){
+		document.getElementById('face').src = "images/catface_orange.png";
+	}
 }
 
 

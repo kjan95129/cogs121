@@ -121,7 +121,7 @@ app.get('/customize/:specs', (req, res) => {
 									}
 									else {
 										db.all(
-											'SELECT * FROM all_cats WHERE color=$color ORDER BY RANDOM() LIMIT 10',
+											'SELECT * FROM all_cats WHERE color=$color ORDER BY RANDOM() LIMIT 20',
 											// parameters to SQL query:
 											{
 												$color: color,
