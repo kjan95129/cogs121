@@ -111,8 +111,9 @@ $('#doneCustomize').click(() => {
 		success: (data) => {
 			console.log("received cat data, mwahaha", data);
 
-			document.getElementById('catResults1').innerHTML = '';
-			document.getElementById('catResults2').innerHTML = '';
+			// document.getElementById('catResults1').innerHTML = '';
+			// document.getElementById('catResults2').innerHTML = '';
+			document.getElementById('photos').innerHTML = '';
 
 			if (data.length >= 0) {
 				let pictureCount = 0;
@@ -121,12 +122,13 @@ $('#doneCustomize').click(() => {
 				for (const e of data) {
 					pictureCount = pictureCount + 1;
 					dataToDisplay = "<img src='" + e.picture + "'/>";
-					if (pictureCount <= 5) {
-						document.getElementById('catResults1').innerHTML += dataToDisplay;
-					}
-					else {
-						document.getElementById('catResults2').innerHTML += dataToDisplay;
-					}
+					document.getElementById('photos').innerHTML += dataToDisplay;
+					// if (pictureCount <= 5) {
+					// 	document.getElementById('catResults1').innerHTML += dataToDisplay;
+					// }
+					// else {
+					// 	document.getElementById('catResults2').innerHTML += dataToDisplay;
+					// }
 				}
 
 			} else {

@@ -19,7 +19,7 @@ h2, h3, h4, h5, h6, p {
     font-family: 'Raleway', sans-serif;
 }
 
-h2{
+h2 {
     font-size: 1.9vw;
 }
 
@@ -40,12 +40,12 @@ h2{
 }
 
 /* BTN HOVER */
-.btn-hover{
+
+.btn-hover {
     margin: 0 15px 15px 15px;
 }
 
-
-.btn-hover, .btn-hover::before, .btn-hover::after{
+.btn-hover, .btn-hover::before, .btn-hover::after {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -71,38 +71,38 @@ h2{
     opacity: 0;
 }
 
-.btn-hover:active,
-.btn-hover:focus{
+.btn-hover:active, .btn-hover:focus {
     transform: scale(1.3);
 }
 
 /* BUTTON COLORS */
-.black, .black:hover{
+
+.black, .black:hover {
     background-color: black;
 }
 
-.black:focus, .black:selection{
+.black:focus, .black:selection {
     background-color: black;
     opacity: 0.5;
 }
 
-.dark-grey, .dark-grey:hover{
+.dark-grey, .dark-grey:hover {
     background-color: darkgrey;
 }
 
-.light-grey, .light-grey:hover{
+.light-grey, .light-grey:hover {
     background-color: lightgrey;
 }
 
-.white, .white:hover{
+.white, .white:hover {
     background-color: white;
 }
 
-.brown, .brown:hover{
+.brown, .brown:hover {
     background-color: brown;
 }
 
-.orange, .orange:hover{
+.orange, .orange:hover {
     background-color: orange;
 }
 
@@ -170,7 +170,6 @@ h2{
 /************************* END INDEX ********************************/
 
 /************************ CUSTOMIZE PAGE **************************/
-
 
 .customize-cat {
     padding-top: 5%;
@@ -293,13 +292,11 @@ h2{
 
 /************************ CAT PICTURES PANEL *************************/
 
-.panel-row {
+/* .panel-row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
 }
-
-/* Create two equal columns that sits next to each other */
 
 .panel-column {
     flex: 50%;
@@ -312,12 +309,27 @@ h2{
     width: 100%;
 }
 
-/* Clear floats after the columns */
-
 .panel-column:after {
     content: "";
     display: table;
     clear: both;
+} */
+
+#photos {
+    /* Prevent vertical gaps */
+    -webkit-column-count: 2;
+    -webkit-grid-column-gap: 10px;
+    -moz-column-count: 2;
+    -moz-grid-column-gap: 10px;
+    column-count: 2;
+    grid-column-gap: 10px;
+}
+
+#photos img {
+    /* Just in case there are inline attributes */
+    width: 95% !important;
+    height: auto !important;
+    margin: 1.9vw 1.3vw;
 }
 
 /************************ END CAT PICTURES PANEL *************************/
