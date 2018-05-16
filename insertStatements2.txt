@@ -9995,3 +9995,7 @@ db.run("UPDATE all_cats SET ears = '21.6333076528' WHERE picture = 'https://res.
 db.run("UPDATE all_cats SET ears = '34.1760149813' WHERE picture = 'https://res.cloudinary.com/dczoi0wxt/image/upload/00001499_024.jpg')");
 db.run("UPDATE all_cats SET ears = '82.0' WHERE picture = 'https://res.cloudinary.com/dczoi0wxt/image/upload/00001499_025.jpg')");
 db.run("UPDATE all_cats SET ears = '103.942291681' WHERE picture = 'https://res.cloudinary.com/dczoi0wxt/image/upload/00001499_028.jpg')");
+
+
+
+maxEarDist: 366.415065192
