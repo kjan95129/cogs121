@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // hook up with your app
 app.get('/customize/:specs', (req, res) => {
 
 	const max_eyes = 404.73818698;
-	const max_ears = 1002.17563331;
+	const max_ears = 366.415065192;
 	const max_nose_mouth = 1026.90992789;
 
 	const specsToLookup = req.params.specs; // matches ':specs' above
