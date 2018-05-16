@@ -77,12 +77,19 @@ slider3.oninput = function () {
 
 	let leftEyeDown = -((nose_mouthApart - 50));
 	let rightEyeDown = -((nose_mouthApart - 50) / 15);
-	let mouthMove = 2*((nose_mouthApart - 50));
+	let mouthMove = 2 * ((nose_mouthApart - 50));
 
 	document.getElementById("rightEyeball").style.marginTop = rightEyeDown;
 	document.getElementById("leftEyeball").style.marginTop = leftEyeDown;
 	document.getElementById("mouth").style.marginTop = mouthMove;
 }
+
+// TODO 
+// UPDATE THIS COLOR VARIABLE BASED ON INPUT
+
+let color = 'black';
+
+
 
 $('#backCustomize').click(() => {
 	window.location = "index";
@@ -92,7 +99,7 @@ $('#doneCustomize').click(() => {
 
 	document.getElementById('customizePage').style.display = "none";
 	document.getElementById('resultsPage').style.display = "block";
-	requestURL = 'customize/' + eyesApart + '+' + earsApart + '+' + nose_mouthApart;
+	requestURL = 'customize/' + eyesApart + '+' + earsApart + '+' + nose_mouthApart + '+' + color;
 	console.log('making ajax request to:', requestURL);
 
 	$.ajax({
