@@ -14,10 +14,17 @@ UI Skeleton Webpages
 Landing Page:
 ![Landing Page](UISkeleton/m5LandingPage.png)
 
-No change.
+The only thing that has changed about this page is the background color, which is a brighter yet still mild color.
+The color is more similar to cats, and is therefore more relatable to those using this application.
 
 Cat Personalization Page:
 ![Customize Page](UISkeleton/m5Customize.png)
+
+Like the Landing page, we changed our background color to be more suitable to our application. We also changed the slider colors
+to compliment our background color. Additionally, we included a line under the "Customize your cat!" to solidify the location
+of the page title. Lastly, we replaced the "back" and "done" buttons with a "show me my cats!" button to create a more
+light-hearted atmosphere, making the application more kid-friendly as well. A "back" was also not necessary as going back only
+took the user back to the landing page.
 
 In our latest version of Build-a-cat, we included an option for users to select a fur color they prefer for their ideal cat.
 Because the customization page is already fairly simple, we displayed the color choices below the sliders rather than
@@ -28,12 +35,15 @@ selects.
 
 
 Results Page:
-![Results - Top](UISkeleton/m5ResultsOne.png)
-![Results - Bottom](UISkeleton/m5ResultsTwo.png)
+![Results - Top](UISkeleton/m5Results1.png)
+![Results - Bottom](UISkeleton/m5Results2.png)
 
 The format in which the resulting cat images are displayed has been changed to resemble the way Pinterest displays relevant
 pins. This way, the user is able to scroll through the images without any awkward gaps from different sized cats pictures.
-The images also have rounded corners, making the resulting gallery look less harsh, and more lovable.
+The images also have rounded corners, making the resulting gallery look less harsh, and more lovable. Lastly, we have a button
+at the bottom of the results page that takes the user back to the customization page. Instead of "back" we labeled the button
+"Build another cat!" This encourages users to not stop their search for their ideal cat, and also offers users an easy and
+straightforward way to re-customize a cat's face.
 
 
 Non-Trivial User Actions
