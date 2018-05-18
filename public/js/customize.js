@@ -50,11 +50,45 @@ slider1.oninput = function () {
 	//	document.getElementById('leftEye').style.padding-right=10;
 }
 
+
+let height = document.getElementById("leftEGrey").height;
+let bottom = document.getElementById("leftEGrey").bottom;
+
 output2.innerHTML = slider2.value;
 slider2.oninput = function () {
 	output2.innerHTML = this.value;
 	earsApart = this.value;
-	console.log("ears: " + earsApart);
+
+	//let newBottom = bottom + 
+	//document.getElementById("leftEGrey").style.bottom 
+
+
+	
+	console.log("height is " + height);
+	let leftEarGMove = earsApart - 50;
+
+	console.log("leftEarGMove is " + leftEarGMove);
+	let newEar = height + leftEarGMove;
+
+	document.getElementById("leftEGrey").style.height = newEar;
+	document.getElementById("rightEGrey").style.height = newEar;
+	console.log("newEar is " + newEar);
+	console.log("bottom " + bottom);
+
+	let newBottom = bottom + leftEarGMove;
+
+	document.getElementById("leftEGrey").style.bottom = newBottom;
+	document.getElementById("rightEGrey").style.bottom = newBottom;
+
+
+
+	//document.getElementById("leftEGrey") = input;
+	//leftEarGMove = ((input - 50) + 100);
+
+	//var ear = cl.transformation
+
+
+	//document.getElementById("leftEGrey").style.marginLeft = leftEarGMove;
 }
 
 

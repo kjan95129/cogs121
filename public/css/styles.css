@@ -285,8 +285,9 @@ hr{
 
 .catFace {
     position: relative;
-    width: 31vw;
+    width: 38vw;
     height: auto;
+    /*right: 2vw;*/
     z-index: 1;
 }
 
@@ -296,7 +297,7 @@ hr{
     right: 1180px;*/
     width: 6vw;
     height: auto;
-    right: -9vw;
+    right: -9vw; 
     bottom: 22vw;
     z-index: 2;
     /*    bottom: 10vw;
@@ -321,6 +322,27 @@ hr{
     bottom: 41vw;
     z-index: 2;
 }
+
+
+.catleftEGrey {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    right: 27.5vw;
+    bottom: 53.26vw;
+    z-index: 2;
+}
+
+.catrightEGrey {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    right: 3.52vw;
+    bottom: 53.26vw;
+    z-index: 2;
+}
+
+
 
 /************************ END CUSTOMIZE PAGE **************************/
 
