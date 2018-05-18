@@ -96,7 +96,7 @@ output3.innerHTML = slider3.value;
 
 // sets margin as current slider value, regardless of cache
 let leftEyeDown = -((nose_mouthApart - 50));
-let rightEyeDown = -((nose_mouthApart - 50) / 15);
+let rightEyeDown = -((nose_mouthApart - 50));
 let mouthMove = ((nose_mouthApart - 50));
 
 document.getElementById("rightEyeball").style.marginTop = rightEyeDown;
@@ -124,23 +124,38 @@ updateColor = function(c){
 	color = c;
 	document.getElementById('colorName').innerHTML = color;
 	if(color == 'black'){
-		document.getElementById('face').src = "images/catface_black.png";
+		document.getElementById('face').src = "images/catHeadBlack.png";
+		document.getElementById('leftEGrey').src = "images/catEarBlack.png";
+		document.getElementById('rightEGrey').src = "images/catEarBlack2.png";
+
 	}
 	else if(color=='brown'){
 		console.log('in brown');
-		document.getElementById('face').src = "images/catface_brown.png";
+		document.getElementById('face').src = "images/catHeadRed.png";
+		document.getElementById('leftEGrey').src = "images/catEarRed.png";
+		document.getElementById('rightEGrey').src = "images/catEarRed2.png";
+
 	}
 	else if(color=='dark grey'){
-		document.getElementById('face').src = "images/catface_darkgrey.png";
+		document.getElementById('face').src = "images/catHeadGrey.png";
+		document.getElementById('leftEGrey').src = "images/catEarGrey.png";
+		document.getElementById('rightEGrey').src = "images/catEarGrey2.png";
 	}
 	else if(color=='light grey'){
-		document.getElementById('face').src = "images/catface_lightgrey.png";
+		document.getElementById('face').src = "images/catHeadLGrey.png";
+		document.getElementById('leftEGrey').src = "images/catEarLGrey.png";
+		document.getElementById('rightEGrey').src = "images/catEarLGrey2.png";
 	}
 	else if(color=='white'){
-		document.getElementById('face').src = "images/catface_white.png";
+		document.getElementById('face').src = "images/catHeadWhite.png";
+		document.getElementById('leftEGrey').src = "images/catEarWhite.png";
+		document.getElementById('rightEGrey').src = "images/catEarWhite2.png";
 	}
 	else if(color=='orange'){
-		document.getElementById('face').src = "images/catface_orange.png";
+		document.getElementById('face').src = "images/catHeadOrange.png";
+		document.getElementById('leftEGrey').src = "images/catEarOrange.png";
+		document.getElementById('rightEGrey').src = "images/catEarOrange2.png";
+
 	}
 }
 

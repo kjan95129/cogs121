@@ -299,7 +299,7 @@ hr{
     height: auto;
     right: -9vw; 
     bottom: 22vw;
-    z-index: 2;
+    z-index: 3;
     /*    bottom: 10vw;
     right: 55vw;*/
     /*  margin: 2vh 1vw;*/
@@ -311,7 +311,7 @@ hr{
     height: auto;
     right: -20vw;
     bottom: 28vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 .catMouth {
