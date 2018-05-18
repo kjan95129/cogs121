@@ -51,10 +51,26 @@ slider1.oninput = function () {
 }
 
 output2.innerHTML = slider2.value;
+
+const ear_height = 8.25;
+const ear_bottom = 68.75;
+
+let new_ears = ear_height + ((earsApart - 50) * .025);
+let new_bottom = ear_bottom + ((earsApart - 50) * .025);
+
+document.getElementById("catHead").style.height = new_ears + "vw";
+document.getElementById("catHead").style.bottom = new_bottom + "vw";
+
 slider2.oninput = function () {
 	output2.innerHTML = this.value;
 	earsApart = this.value;
 	console.log("ears: " + earsApart);
+
+	let new_ears = ear_height + ((earsApart - 50) * .025);
+	let new_bottom = ear_bottom + ((earsApart - 50) * .025);
+
+	document.getElementById("catHead").style.height = new_ears + "vw";
+	document.getElementById("catHead").style.bottom = new_bottom + "vw";
 }
 
 
@@ -63,11 +79,13 @@ output3.innerHTML = slider3.value;
 // sets margin as current slider value, regardless of cache
 let leftEyeDown = -((nose_mouthApart - 50));
 let rightEyeDown = -((nose_mouthApart - 50) / 15);
-let mouthMove = ((nose_mouthApart - 50));
+let mouthMove = 2 * ((nose_mouthApart - 50));
+let earMove = (-(mouthMove)/2) - rightEyeDown;
 
 document.getElementById("rightEyeball").style.marginTop = rightEyeDown;
 document.getElementById("leftEyeball").style.marginTop = leftEyeDown;
 document.getElementById("mouth").style.marginTop = mouthMove;
+document.getElementById("catHead").style.marginTop = earMove;
 
 
 slider3.oninput = function () {
@@ -78,10 +96,13 @@ slider3.oninput = function () {
 	let leftEyeDown = -((nose_mouthApart - 50));
 	let rightEyeDown = -((nose_mouthApart - 50) / 15);
 	let mouthMove = 2 * ((nose_mouthApart - 50));
+	let earMove = (-(mouthMove)/2) - rightEyeDown;
+	
 
 	document.getElementById("rightEyeball").style.marginTop = rightEyeDown;
 	document.getElementById("leftEyeball").style.marginTop = leftEyeDown;
 	document.getElementById("mouth").style.marginTop = mouthMove;
+	document.getElementById("catHead").style.marginTop = earMove;
 }
 
 // TODO 

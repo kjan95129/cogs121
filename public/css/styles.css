@@ -206,7 +206,7 @@ hr{
 }
 
 .customize-cat {
-    padding-top: 3%;
+    padding-top: 10%;
     padding-left: 10%;
     height: 100%;
 }
@@ -320,6 +320,15 @@ hr{
     right: -2.3vw;
     bottom: 41vw;
     z-index: 2;
+}
+
+.catHead{
+    position: relative;
+    width: 30.68vw;
+    height: 8.25vw;
+    bottom: 68.75vw;
+    left: .23vw;
+    z-index: 1;
 }
 
 /************************ END CUSTOMIZE PAGE **************************/
