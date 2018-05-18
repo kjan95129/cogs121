@@ -52,8 +52,8 @@ slider1.oninput = function () {
 
 output2.innerHTML = slider2.value;
 
-const ear_height = 8.25;
-const ear_bottom = 68.75;
+const ear_height = 7;
+const ear_bottom = 70.75;
 
 let new_ears = ear_height + ((earsApart - 50) * .025);
 let new_bottom = ear_bottom + ((earsApart - 50) * .025);

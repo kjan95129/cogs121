@@ -285,7 +285,7 @@ hr{
 
 .catFace {
     position: relative;
-    width: 31vw;
+    width: 36vw;
     height: auto;
     z-index: 1;
 }
@@ -296,8 +296,8 @@ hr{
     right: 1180px;*/
     width: 6vw;
     height: auto;
-    right: -9vw;
-    bottom: 22vw;
+    right: -12vw;
+    bottom: 21vw;
     z-index: 2;
     /*    bottom: 10vw;
     right: 55vw;*/
@@ -308,8 +308,8 @@ hr{
     position: relative;
     width: 6vw;
     height: auto;
-    right: -20vw;
-    bottom: 28vw;
+    right: -23vw;
+    bottom: 27vw;
     z-index: 2;
 }
 
@@ -317,17 +317,17 @@ hr{
     position: relative;
     width: 30vw;
     height: auto;
-    right: -2.3vw;
-    bottom: 41vw;
+    right: -5.3vw;
+    bottom: 40vw;
     z-index: 2;
 }
 
 .catHead{
     position: relative;
-    width: 30.68vw;
-    height: 8.25vw;
-    bottom: 68.75vw;
-    left: .23vw;
+    width: 32vw;
+    height: 7vw;
+    bottom: 70.75vw;
+    left: 2vw;
     z-index: 1;
 }
 
