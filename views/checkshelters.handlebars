@@ -1,107 +1,146 @@
 <html>
 
-  <head>
-  	<title>Build-A-Cat</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/c3@0.6.0/c3.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/d3@5.4.0/dist/d3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/c3@0.6.0/c3.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  	<link rel="stylesheet" href="css/bootstrap.min.css">
-  	<link rel="stylesheet" href="css/material-kit.css">
-  	<link rel="stylesheet" href="css/styles.css">
+<head>
+	<title>Build-A-Cat</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/c3@0.6.0/c3.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/d3@5.4.0/dist/d3.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/c3@0.6.0/c3.min.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/material-kit.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 
-  	<body>
-  </head>
+	<body>
+</head>
 
-  <body>
+<body>
 
-  	<div>
-  		<div id="checkSheltersPage">
-  			<h1 class="text-center">Cat Adoption Facts</h1>
+	<div>
+		<div id="checkSheltersPage">
+			<div class="navbar">
+				<img class="home-button" src="images/house-logo.png" onclick="location.href='/index'" />
+				<img class="home-button" src="images/cat-logo.png" onclick="location.href='/customize'" />
+				<img class="home-button" src="images/stats-logo.png" onclick="location.href='#'" />
+				<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
+					<img class="home-button" src="images/adopt-logo.png" />
+				</a>
+				<button class="home-button" data-toggle="modal" data-target="#myModal">?</button>
+			</div>
 
-  			<hr class="adoptResults"/>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Help! What do I do?</h4>
+						</div>
+						<div class="modal-body">
+							<p>Adjust the dot on the sliders to customize the distance between the cat's eyes, ears, and eyes to mouth. After you
+								are finished, click "SHOW ME MY CATS!" to find the cat matches based on your customization!
+								<p> If you wish to make changes to your ideal cat, click the "BUILD ANOTHER CAT!" button to go back to the customize
+									page.
+								</p>
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <p style="padding:10px;">Courtesy of: <a href=https://catalog.data.gov/dataset/animal-services-intake-data-57f73>Animal Services Intake Data</a> from the City of Los Angeles.</p>
+			<h2 class="text-center">Cat Adoption Facts</h2>
+
+			<hr class="customize" />
+
+			<div class="text-content">
+				<p>Courtesy of:
+					<a href="https://catalog.data.gov/dataset/animal-services-intake-data-57f73">Animal Services Intake Data</a> from the City of Los Angeles.
+				</p>
 
 
-        <div class="col">
-          <div class="row">
-            <h2 style="margin-left:20px;">Animals taken to shelters in Los Angeles:</h2>
-            <div id="chart1" ></div>
-            <script>
-              const numTotalPets = 187593;
-              const numCats = 63853;
-              const numDogs = 102013;
-              const numHorses = 70;
-              const numOther = 21658;
-              var chart1 = c3.generate({
-                bindto: '#chart1',
-                data: {
-                  columns: [
-                    ['cats', numCats],
-                    ['dogs', numDogs],
-                    ['equine', numHorses],
-                    ['other', numOther]
-                  ],
-                  type: 'pie'
-                }
-              });
-              </script>
-            </div>
-            <div class="row">
-              <h2 style="margin-left:20px;">Species of cats taken to shelters in Los Angeles: </h2>
-              <div id="chart2"></div>
-              <script>
-                const domSH = 52231;
-                const domLH = 2941;
-                const bombay = 12;
-                const persian = 107;
-                const mainecoon = 187;
-                const siamese = 1536;
-                const amerSH = 1430;
-                const russBlue = 241;
-                const abyssinian = 95;
-                const ragdoll = 55;
-                var chart2 = c3.generate({
-                  bindto: '#chart2',
-                  data: {
-                    columns: [
-                      ['Domestic ShortHair', domSH],
-                      ['Domestic LongHair', domLH],
-                      ['Bombay', bombay],
-                      ['Persian', persian],
-                      ['Maine Coon', mainecoon],
-                      ['Siamese', siamese],
-                      ['American Shorthair', amerSH],
-                      ['Russian Blue', russBlue],
-                      ['Abyssinian', abyssinian],
-                      ['Ragdoll', ragdoll]
-                    ],
-                    type: 'pie'
-                  }
-                });
-              </script>
-            </div>
-          </div>
+				<div class="col">
+					<div class="col-sm-6 graph">
+						<h3>Animals taken to shelters in Los Angeles:</h3>
+						<div id="chart1"></div>
+						<script>
+							const numTotalPets = 187593;
+							const numCats = 63853;
+							const numDogs = 102013;
+							const numHorses = 70;
+							const numOther = 21658;
+							var chart1 = c3.generate({
+								bindto: '#chart1',
+								data: {
+									columns: [
+										['cats', numCats],
+										['dogs', numDogs],
+										['equine', numHorses],
+										['other', numOther]
+									],
+									type: 'pie'
+								}
+							});
+						</script>
+					</div>
+					<div class="col-sm-6 graph">
+						<h3>Species of cats taken to shelters in Los Angeles: </h3>
+						<div id="chart2"></div>
+						<script>
+							const domSH = 52231;
+							const domLH = 2941;
+							const bombay = 12;
+							const persian = 107;
+							const mainecoon = 187;
+							const siamese = 1536;
+							const amerSH = 1430;
+							const russBlue = 241;
+							const abyssinian = 95;
+							const ragdoll = 55;
+							var chart2 = c3.generate({
+								bindto: '#chart2',
+								data: {
+									columns: [
+										['Domestic ShortHair', domSH],
+										['Domestic LongHair', domLH],
+										['Bombay', bombay],
+										['Persian', persian],
+										['Maine Coon', mainecoon],
+										['Siamese', siamese],
+										['American Shorthair', amerSH],
+										['Russian Blue', russBlue],
+										['Abyssinian', abyssinian],
+										['Ragdoll', ragdoll]
+									],
+									type: 'pie'
+								}
+							});
+						</script>
+					</div>
+				</div>
 
-  			<div class="text-center">
-  				<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Alternatively, build a cat!</button>
-  			</div>
-  		</div>
-  	</div>
+				<div class="graph-buttons">
+					<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Alternatively, build a cat!</button>
+					<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
+						<button type="button" class="btn btn-primary" id="checkCats">Or adopt a cat near you</button>
+					</a>
+				</div>
 
-    <div class="text-center" style="padding:10px;">
-        <button type="button" class="btn btn-primary" id="checkCats">Or adopt a cat near you</button>
-    </div>
+				<div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  	<script src="js/checkshelters.js"></script>
+	<script src="js/checkshelters.js"></script>
 
-  </body>
+</body>
 
-  </html>
+</html>

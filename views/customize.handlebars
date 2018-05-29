@@ -7,7 +7,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -19,9 +18,16 @@
 <body>
 
 	<div>
-		<button class="w3-xlarge w3-circle pull-right" style="margin-right: 20px; padding: 10px 15px 10px 15px; background-color: #a09b9a; color: white;"
-		 data-toggle="modal" data-target="#myModal">?</button>
+		<div class="navbar">
+			<img class="home-button" src="images/house-logo.png" onclick="location.href='/index'" />
+			<img class="home-button" src="images/cat-logo.png" onclick="location.href='customize'" />
+			<img class="home-button" src="images/stats-logo.png" onclick="location.href='/checkshelters'" />
+			<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
+				<img class="home-button" src="images/adopt-logo.png"/>
+			</a>
 
+			<button class="home-button" data-toggle="modal" data-target="#myModal">?</button>
+		</div>
 
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog">
@@ -46,9 +52,9 @@
 
 
 		<div id="customizePage">
-			<h1 class="text-center">Customize your cat!</h1>
+			<h2 class="text-center">Build your cat!</h2>
 
-			<hr class="customize"/>
+			<hr class="customize" />
 
 			<div class="customize-body">
 
@@ -58,30 +64,11 @@
 					<img src="images/cateye.png" class="leftEye img-responsive" id="leftEyeball" />
 					<img src="images/cateye2.png" class="rightEye img-responsive" id="rightEyeball" />
 					<img src="images/catMouth.png" class="catMouth img-responsive" id="mouth" />
-					<img src="images/catears_black.png" class="catHead img-responsive" id="catHead"/>
-
-
-					<!--
-				<div class="inner">
-					<img src="images/cateye.png" />
-				</div> -->
-
+					<img src="images/catears_black.png" class="catHead img-responsive" id="catHead" />
 				</div>
 
-				<!--
-		<div class="col-lg-6 catFace">
-			<img src="images/catface.png" class="col-lg-6" width="400" height="auto" />
-			<div>
-				<img src="images/cateye.png" class="leftEye" width="30" height="auto" />
-				<img src="images/cateye2.png" class="rightEye" width="5%" height="auto" />
-				<img src="images/catMouth.png" class="catMouth" width="30%" height="auto"/>
-			</div>
-
-		</div> -->
-
-
 				<div class="col-lg-6 slidecontainer img-responsive">
-					<h2>Eyes</h2>
+					<h3>Eyes</h3>
 					<div>
 						<input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
 						<p>Value:
@@ -89,7 +76,7 @@
 						</p>
 					</div>
 
-					<h2>Ears</h2>
+					<h3>Ears</h3>
 					<div>
 						<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
 						<p>Value:
@@ -97,7 +84,7 @@
 						</p>
 					</div>
 
-					<h2>Eyes to mouth</h2>
+					<h3>Eyes to mouth</h3>
 					<div>
 						<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
 						<p>Value:
@@ -105,9 +92,9 @@
 						</p>
 					</div>
 
-					<h2>Color:
+					<h3>Color:
 						<span id="colorName">black</span>
-					</h2>
+					</h3>
 					<div class="btn btn-hover black" onclick="updateColor('black')"></div>
 					<div class="btn btn-hover dark-grey" onclick="updateColor('dark grey')"></div>
 					<div class="btn btn-hover light-grey" onclick="updateColor('light grey')"></div>
@@ -127,21 +114,11 @@
 		</div>
 
 		<div id="resultsPage">
-			<h1 class="text-center">Are these your ideal cats?</h1>
+			<h2 class="text-center">Are these your ideal cats?</h2>
 
-			<hr class="customize"/>
+			<hr class="customize" />
 
-			{{!--
-			<div class="panel-row">
-				<!--text-center, btn class are from boostrap css -->
-				<div id="catResults1" class="panel-column"></div>
-				<div id="catResults2" class="panel-column"></div>
-			</div> --}}
-
-			<div id="photos">
-				<!--text-center, btn class are from boostrap css -->
-
-			</div>
+			<div id="photos"></div>
 
 			<div class="text-center">
 				<button type="button" class="btn btn-danger" id="backResults">Build another cat!</button>

@@ -16,12 +16,18 @@ h1 {
     color: rgb(80, 80, 80);
 }
 
-h2, h3, h4, h5, h6, p {
-    font-family: 'Raleway', sans-serif;
+h2{
+    font-family: 'Coming Soon', cursive;
+    font-size: 4vw;
+    color: rgb(80, 80, 80);
 }
 
-h2 {
+h3{
     font-size: 1.9vw;
+}
+
+h3, h4, h5, h6, p {
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn {
@@ -112,7 +118,6 @@ h2 {
     font-size: 7vw;
     padding-top: 3vw;
 }
-
 /************************* END DEFAULT STYLES ************************/
 
 /************************* INDEX ********************************/
@@ -332,32 +337,37 @@ hr{
     z-index: 1;
 }
 
+.navbar{
+    position: fixed;
+    background-color: transparent;
+    box-shadow: none;
+    left: 95%;
+    z-index: 999;
+    width: 5%;
+}
+
+.home-button{
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: 4% 0;
+    transition: .2s;
+    border-radius: 50%;
+    background-color: #a09b9a; 
+    color: white;
+}
+
+.home-button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#resultsPage{
+    margin: 0 5vw 10vw 5vw;
+}
+
 /************************ END CUSTOMIZE PAGE **************************/
 
 /************************ CAT PICTURES PANEL *************************/
-
-/* .panel-row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-.panel-column {
-    flex: 50%;
-    padding: 0 4px;
-}
-
-.panel-column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-.panel-column:after {
-    content: "";
-    display: table;
-    clear: both;
-} */
 
 #photos {
     /* Prevent vertical gaps */
@@ -378,12 +388,27 @@ hr{
     border-radius: 10px;
 }
 
+
 /************************ END CAT PICTURES PANEL *************************/
 
 
-#resultsPage{
-    margin: 0 5vw 10vw 5vw;
+/************************ CAT FACTS ************************/
+
+.text-content{
+    padding: 0 15%;
+    text-align: center;
 }
+
+.graph{
+    margin-bottom: 5%;
+}
+
+.graph-buttons{
+    margin: 5% 0;
+}
+/************************ END CAT FACTS ************************/
+
+
 
 
 /************************* MISC ******************************/
