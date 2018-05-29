@@ -51,44 +51,27 @@ slider1.oninput = function () {
 }
 
 
-let height = document.getElementById("leftEGrey").height;
-let bottom = document.getElementById("leftEGrey").bottom;
-
 output2.innerHTML = slider2.value;
+
+const ear_height = 7;
+const ear_bottom = 70.75;
+
+let new_ears = ear_height + ((earsApart - 50) * .025);
+let new_bottom = ear_bottom + ((earsApart - 50) * .025);
+
+document.getElementById("catHead").style.height = new_ears + "vw";
+document.getElementById("catHead").style.bottom = new_bottom + "vw";
+
 slider2.oninput = function () {
 	output2.innerHTML = this.value;
 	earsApart = this.value;
+	console.log("ears: " + earsApart);
 
-	//let newBottom = bottom + 
-	//document.getElementById("leftEGrey").style.bottom 
+	let new_ears = ear_height + ((earsApart - 50) * .025);
+	let new_bottom = ear_bottom + ((earsApart - 50) * .025);
 
-
-	
-	console.log("height is " + height);
-	let leftEarGMove = earsApart - 50;
-
-	console.log("leftEarGMove is " + leftEarGMove);
-	let newEar = height + leftEarGMove;
-
-	document.getElementById("leftEGrey").style.height = newEar;
-	document.getElementById("rightEGrey").style.height = newEar;
-	console.log("newEar is " + newEar);
-	console.log("bottom " + bottom);
-
-	let newBottom = bottom + leftEarGMove;
-
-	document.getElementById("leftEGrey").style.bottom = newBottom;
-	document.getElementById("rightEGrey").style.bottom = newBottom;
-
-
-
-	//document.getElementById("leftEGrey") = input;
-	//leftEarGMove = ((input - 50) + 100);
-
-	//var ear = cl.transformation
-
-
-	//document.getElementById("leftEGrey").style.marginLeft = leftEarGMove;
+	document.getElementById("catHead").style.height = new_ears + "vw";
+	document.getElementById("catHead").style.bottom = new_bottom + "vw";
 }
 
 
@@ -96,12 +79,14 @@ output3.innerHTML = slider3.value;
 
 // sets margin as current slider value, regardless of cache
 let leftEyeDown = -((nose_mouthApart - 50));
-let rightEyeDown = -((nose_mouthApart - 50));
-let mouthMove = ((nose_mouthApart - 50));
+let rightEyeDown = -((nose_mouthApart - 50) / 15);
+let mouthMove = 2 * ((nose_mouthApart - 50));
+let earMove = (-(mouthMove)/2) - rightEyeDown;
 
 document.getElementById("rightEyeball").style.marginTop = rightEyeDown;
 document.getElementById("leftEyeball").style.marginTop = leftEyeDown;
 document.getElementById("mouth").style.marginTop = mouthMove;
+document.getElementById("catHead").style.marginTop = earMove;
 
 
 slider3.oninput = function () {
@@ -112,10 +97,13 @@ slider3.oninput = function () {
 	let leftEyeDown = -((nose_mouthApart - 50));
 	let rightEyeDown = -((nose_mouthApart - 50) / 15);
 	let mouthMove = 2 * ((nose_mouthApart - 50));
+	let earMove = (-(mouthMove)/2) - rightEyeDown;
+	
 
 	document.getElementById("rightEyeball").style.marginTop = rightEyeDown;
 	document.getElementById("leftEyeball").style.marginTop = leftEyeDown;
 	document.getElementById("mouth").style.marginTop = mouthMove;
+	document.getElementById("catHead").style.marginTop = earMove;
 }
 
 // TODO 
@@ -124,38 +112,28 @@ updateColor = function(c){
 	color = c;
 	document.getElementById('colorName').innerHTML = color;
 	if(color == 'black'){
-		document.getElementById('face').src = "images/catHeadBlack.png";
-		document.getElementById('leftEGrey').src = "images/catEarBlack.png";
-		document.getElementById('rightEGrey').src = "images/catEarBlack2.png";
-
+		document.getElementById('face').src = "images/catface_test_black.png";
+		document.getElementById('catHead').src = "images/cathead_black.png";
 	}
 	else if(color=='brown'){
-		console.log('in brown');
-		document.getElementById('face').src = "images/catHeadRed.png";
-		document.getElementById('leftEGrey').src = "images/catEarRed.png";
-		document.getElementById('rightEGrey').src = "images/catEarRed2.png";
-
+		document.getElementById('face').src = "images/catface_test_brown.png";
+		document.getElementById('catHead').src = "images/cathead_brown.png";
 	}
 	else if(color=='dark grey'){
-		document.getElementById('face').src = "images/catHeadGrey.png";
-		document.getElementById('leftEGrey').src = "images/catEarGrey.png";
-		document.getElementById('rightEGrey').src = "images/catEarGrey2.png";
+		document.getElementById('face').src = "images/catface_test_darkgrey.png";
+		document.getElementById('catHead').src = "images/cathead_darkgrey.png";
 	}
 	else if(color=='light grey'){
-		document.getElementById('face').src = "images/catHeadLGrey.png";
-		document.getElementById('leftEGrey').src = "images/catEarLGrey.png";
-		document.getElementById('rightEGrey').src = "images/catEarLGrey2.png";
+		document.getElementById('face').src = "images/catface_test_lightgrey.png";
+		document.getElementById('catHead').src = "images/cathead_lightgrey.png";
 	}
 	else if(color=='white'){
-		document.getElementById('face').src = "images/catHeadWhite.png";
-		document.getElementById('leftEGrey').src = "images/catEarWhite.png";
-		document.getElementById('rightEGrey').src = "images/catEarWhite2.png";
+		document.getElementById('face').src = "images/catface_test_white.png";
+		document.getElementById('catHead').src = "images/cathead_white.png";
 	}
 	else if(color=='orange'){
-		document.getElementById('face').src = "images/catHeadOrange.png";
-		document.getElementById('leftEGrey').src = "images/catEarOrange.png";
-		document.getElementById('rightEGrey').src = "images/catEarOrange2.png";
-
+		document.getElementById('face').src = "images/catface_test_orange.png";
+		document.getElementById('catHead').src = "images/cathead_orange.png";
 	}
 }
 

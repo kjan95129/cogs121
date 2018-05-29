@@ -206,7 +206,7 @@ hr{
 }
 
 .customize-cat {
-    padding-top: 3%;
+    padding-top: 1%;
     padding-left: 10%;
     height: 100%;
 }
@@ -285,7 +285,7 @@ hr{
 
 .catFace {
     position: relative;
-    width: 38vw;
+    width: 36vw;
     height: auto;
     /*right: 2vw;*/
     z-index: 1;
@@ -297,9 +297,9 @@ hr{
     right: 1180px;*/
     width: 6vw;
     height: auto;
-    right: -9vw; 
-    bottom: 22vw;
-    z-index: 3;
+    right: -12vw;
+    bottom: 21vw;
+    z-index: 2;
     /*    bottom: 10vw;
     right: 55vw;*/
     /*  margin: 2vh 1vw;*/
@@ -309,40 +309,28 @@ hr{
     position: relative;
     width: 6vw;
     height: auto;
-    right: -20vw;
-    bottom: 28vw;
-    z-index: 3;
+    right: -23vw;
+    bottom: 27vw;
+    z-index: 2;
 }
 
 .catMouth {
     position: relative;
     width: 30vw;
     height: auto;
-    right: -2.3vw;
-    bottom: 41vw;
+    right: -5.3vw;
+    bottom: 40vw;
     z-index: 2;
 }
 
-
-.catleftEGrey {
-    position: absolute;
-    width: 11vw;
-    height: auto;
-    right: 27.5vw;
-    bottom: 53.26vw;
-    z-index: 2;
+.catHead{
+    position: relative;
+    width: 32vw;
+    height: 7vw;
+    bottom: 70.75vw;
+    left: 2vw;
+    z-index: 1;
 }
-
-.catrightEGrey {
-    position: absolute;
-    width: 11vw;
-    height: auto;
-    right: 3.52vw;
-    bottom: 53.26vw;
-    z-index: 2;
-}
-
-
 
 /************************ END CUSTOMIZE PAGE **************************/
 
