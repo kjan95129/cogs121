@@ -27,24 +27,37 @@
 
   			<hr class="adoptResults"/>
 
-        <div id="chart1"></div>
-        <script>
-          const numTotalPets = 187593;
-          const numCats = 63853;
-          var chart1 = c3.generate({
-            bindto: '#chart1',
-            data: {
-              columns: [
-                ['cats', numCats],
-                ['dogs', numTotalPets - numCats]
-              ],
-              type: 'pie',
-              onclick: function(d, i) {console.log("onclick", d, i);},
-              onmouseover: function(d, i) {console.log("onmouseover", d, i);},
-              onmouseout: function(d, i) {console.log("onmouseout", d, i);}
-            }
-          });
-        </script>
+        <p style="padding:10px;">Courtesy of: <a href=https://catalog.data.gov/dataset/animal-services-intake-data-57f73>Animal Services Intake Data</a> from the City of Los Angeles.</p>
+
+
+        <div class="row">
+          <div class="col">
+            <h2 style="margin-left:20px;">Animals taken to shelters in Los Angeles:</h2>
+            <div id="chart1"></div>
+            <script>
+              const numTotalPets = 187593;
+              const numCats = 63853;
+              const numDogs = 102013;
+              const numHorses = 70;
+              const numOther = 21658;
+              var chart1 = c3.generate({
+                bindto: '#chart1',
+                data: {
+                  columns: [
+                    ['cats', numCats],
+                    ['dogs', numDogs],
+                    ['equine', numHorses],
+                    ['other', numOther]
+                  ],
+                  type: 'pie',
+                  onclick: function(d, i) {console.log("onclick", d, i);},
+                  onmouseover: function(d, i) {console.log("onmouseover", d, i);},
+                  onmouseout: function(d, i) {console.log("onmouseout", d, i);}
+                }
+              });
+              </script>
+            </div>
+          </div>
 
   			<div class="text-center">
   				<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Alternatively, build a cat!</button>
