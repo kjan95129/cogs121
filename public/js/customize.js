@@ -112,28 +112,28 @@ updateColor = function(c){
 	color = c;
 	document.getElementById('colorName').innerHTML = color;
 	if(color == 'black'){
-		document.getElementById('face').src = "images/catface_test_black.png";
-		document.getElementById('catHead').src = "images/cathead_black.png";
+		document.getElementById('face').src = "images/cathead_black.png";
+		document.getElementById('catHead').src = "images/catears_black.png";
 	}
 	else if(color=='brown'){
-		document.getElementById('face').src = "images/catface_test_brown.png";
-		document.getElementById('catHead').src = "images/cathead_brown.png";
+		document.getElementById('face').src = "images/cathead_brown.png";
+		document.getElementById('catHead').src = "images/catears_brown.png";
 	}
 	else if(color=='dark grey'){
-		document.getElementById('face').src = "images/catface_test_darkgrey.png";
-		document.getElementById('catHead').src = "images/cathead_darkgrey.png";
+		document.getElementById('face').src = "images/cathead_darkgrey.png";
+		document.getElementById('catHead').src = "images/catears_darkgrey.png";
 	}
 	else if(color=='light grey'){
-		document.getElementById('face').src = "images/catface_test_lightgrey.png";
-		document.getElementById('catHead').src = "images/cathead_lightgrey.png";
+		document.getElementById('face').src = "images/cathead_lightgrey.png";
+		document.getElementById('catHead').src = "images/catears_lightgrey.png";
 	}
 	else if(color=='white'){
-		document.getElementById('face').src = "images/catface_test_white.png";
-		document.getElementById('catHead').src = "images/cathead_white.png";
+		document.getElementById('face').src = "images/cathead_white.png";
+		document.getElementById('catHead').src = "images/catears_white.png";
 	}
 	else if(color=='orange'){
-		document.getElementById('face').src = "images/catface_test_orange.png";
-		document.getElementById('catHead').src = "images/cathead_orange.png";
+		document.getElementById('face').src = "images/cathead_orange.png";
+		document.getElementById('catHead').src = "images/catears_orange.png";
 	}
 }
 
