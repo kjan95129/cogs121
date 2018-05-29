@@ -27,24 +27,68 @@
 
   			<hr class="adoptResults"/>
 
-        <div id="chart1"></div>
-        <script>
-          const numTotalPets = 187593;
-          const numCats = 63853;
-          var chart1 = c3.generate({
-            bindto: '#chart1',
-            data: {
-              columns: [
-                ['cats', numCats],
-                ['dogs', numTotalPets - numCats]
-              ],
-              type: 'pie',
-              onclick: function(d, i) {console.log("onclick", d, i);},
-              onmouseover: function(d, i) {console.log("onmouseover", d, i);},
-              onmouseout: function(d, i) {console.log("onmouseout", d, i);}
-            }
-          });
-        </script>
+        <p style="padding:10px;">Courtesy of: <a href=https://catalog.data.gov/dataset/animal-services-intake-data-57f73>Animal Services Intake Data</a> from the City of Los Angeles.</p>
+
+
+        <div class="col">
+          <div class="row">
+            <h2 style="margin-left:20px;">Animals taken to shelters in Los Angeles:</h2>
+            <div id="chart1" ></div>
+            <script>
+              const numTotalPets = 187593;
+              const numCats = 63853;
+              const numDogs = 102013;
+              const numHorses = 70;
+              const numOther = 21658;
+              var chart1 = c3.generate({
+                bindto: '#chart1',
+                data: {
+                  columns: [
+                    ['cats', numCats],
+                    ['dogs', numDogs],
+                    ['equine', numHorses],
+                    ['other', numOther]
+                  ],
+                  type: 'pie'
+                }
+              });
+              </script>
+            </div>
+            <div class="row">
+              <h2 style="margin-left:20px;">Species of cats taken to shelters in Los Angeles: </h2>
+              <div id="chart2"></div>
+              <script>
+                const domSH = 52231;
+                const domLH = 2941;
+                const bombay = 12;
+                const persian = 107;
+                const mainecoon = 187;
+                const siamese = 1536;
+                const amerSH = 1430;
+                const russBlue = 241;
+                const abyssinian = 95;
+                const ragdoll = 55;
+                var chart2 = c3.generate({
+                  bindto: '#chart2',
+                  data: {
+                    columns: [
+                      ['Domestic ShortHair', domSH],
+                      ['Domestic LongHair', domLH],
+                      ['Bombay', bombay],
+                      ['Persian', persian],
+                      ['Maine Coon', mainecoon],
+                      ['Siamese', siamese],
+                      ['American Shorthair', amerSH],
+                      ['Russian Blue', russBlue],
+                      ['Abyssinian', abyssinian],
+                      ['Ragdoll', ragdoll]
+                    ],
+                    type: 'pie'
+                  }
+                });
+              </script>
+            </div>
+          </div>
 
   			<div class="text-center">
   				<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Alternatively, build a cat!</button>
