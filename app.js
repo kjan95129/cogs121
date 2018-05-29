@@ -12,6 +12,7 @@ const app = express();
 // setters for routes
 const index = require('./routes/index');
 const customize = require('./routes/customize');
+const checkshelters = require('./routes/checkshelters');
 
 // sqlite dependencies
 const sqlite3 = require('sqlite3');
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', index.view);
 app.get('/index', index.view);
 app.get('/customize', customize.view);
+app.get('/checkshelters', checkshelters.view);
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true })); // hook up with your app
