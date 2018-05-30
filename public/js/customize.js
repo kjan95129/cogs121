@@ -17,24 +17,6 @@ let mobile = false;
 let ear_height = 7;
 let ear_bottom = 70.75;
 
-var x = window.matchMedia("(max-width: 768px)");
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes 
-
-function myFunction(x){
-	if(x.matches){
-		mobile = true;
-		ear_height = 13;
-		ear_bottom = 139.75;
-	}
-	else{
-		mobile = false;
-	}
-}
-
-// SLIDER 1
-output1.innerHTML = slider1.value;
-
 updateEyes = function(){
 	let leftMove = -((eyesApart - 50));
 	let rightMove = ((eyesApart - 50));
@@ -48,17 +30,6 @@ updateEyes = function(){
 	document.getElementById("rightEyeball").style.marginLeft = rightMove;
 }
 
-updateEyes();
-slider1.oninput = function () {
-	output1.innerHTML = this.value;
-	eyesApart = this.value;
-	updateEyes();
-}
-
-
-// SLIDER 2
-output2.innerHTML = slider2.value;
-
 updateEars = function(){
 	let new_ears = ear_height + ((earsApart - 50) * .025);
 	let new_bottom = ear_bottom + ((earsApart - 50) * .025);
@@ -70,21 +41,13 @@ updateEars = function(){
 		slider_top = -95 - ((earsApart-50) * .1);
 		document.getElementById("_sliders").style.marginTop = slider_top + "vw";
 	}
+	else{
+		document.getElementById("_sliders").style.marginTop = 0;
+	}
 
 	document.getElementById("catHead").style.height = new_ears + "vw";
 	document.getElementById("catHead").style.bottom = new_bottom + "vw";
 }
-
-updateEars();
-slider2.oninput = function () {
-	output2.innerHTML = this.value;
-	earsApart = this.value;
-	updateEars();
-}
-
-
-// SLIDER 3 
-output3.innerHTML = slider3.value;
 
 updateNoseMouth = function () {
 	let leftEyeDown = -((nose_mouthApart - 50));
@@ -104,6 +67,55 @@ updateNoseMouth = function () {
 	document.getElementById("mouth").style.marginTop = mouthMove;
 	document.getElementById("catHead").style.marginTop = earMove;
 }
+
+
+var x = window.matchMedia("(max-width: 768px)");
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes 
+
+function myFunction(x){
+	if(x.matches){
+		mobile = true;
+		ear_height = 13;
+		ear_bottom = 137.75;
+		updateEars();
+		updateEyes();
+		updateNoseMouth();
+	}
+	else{
+		mobile = false;
+		ear_height = 7;
+		ear_bottom = 70.75;
+		updateEars();
+		updateEyes();
+		updateNoseMouth();
+	}
+}
+
+// SLIDER 1
+output1.innerHTML = slider1.value;
+
+updateEyes();
+slider1.oninput = function () {
+	output1.innerHTML = this.value;
+	eyesApart = this.value;
+	updateEyes();
+}
+
+
+// SLIDER 2
+output2.innerHTML = slider2.value;
+
+updateEars();
+slider2.oninput = function () {
+	output2.innerHTML = this.value;
+	earsApart = this.value;
+	updateEars();
+}
+
+
+// SLIDER 3 
+output3.innerHTML = slider3.value;
 
 updateNoseMouth();
 slider3.oninput = function () {
