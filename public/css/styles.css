@@ -335,6 +335,10 @@ hr {
         margin-bottom: 10%;
         margin-left: 0;
     }
+
+    #checkCats{
+        margin-bottom: 10%;
+    }
 }
 
 .catFace {
@@ -419,7 +423,7 @@ hr {
     background-color: transparent;
     box-shadow: none;
     left: 94%;
-    z-index: 999;
+    z-index: 9999;
     width: 5%;
 }
 
@@ -453,7 +457,7 @@ hr {
     .navbar {
         left: 85%;
         width: 12%;
-        background-color: rgb(255, 255, 255, .5);
+        background-color: rgb(255, 255, 255, .8);
         padding: 0;
     }
     .navbar-toggle {
