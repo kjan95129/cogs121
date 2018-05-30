@@ -35,6 +35,22 @@ the "Cat Facts" page to encourage users to view statistics regarding cat adoptio
 cats!
 
 Cat Statistics Page:
+![Cat Adoption Facts Page Top](UISkeleton/m6Facts1.png)
+![Cat Adoption Facts Page Top](UISkeleton/m6Facts2.png)
+
+This is a new page that we added for this milestone incorporating data visualization. Some facts that we provide
+include the percentage of different animals that are taken to animal shelters, which shows that cats are the
+second highest animals that are taken to shelters. We offer similar statistics in the form of pie charts with
+color differentiations to allow users to easily interpret the data. At the bottom of the page we have a button
+so users can customize their cat, and a button so they can hopefully adopt a cat. These buttons are also available
+on the right side of the page like the other pages have.
 
 
-Data Visualization: 
+Data Visualization:
+![Cat Adoption Facts Page Top](UISkeleton/m6Facts1.png)
+![Cat Adoption Facts Page Top](UISkeleton/m6Facts2.png)
+
+Our data visualization page contains three pie charts that display the following data: (1) what percentage of animals
+that are taken to the animal shelter in Los Angeles are dogs, cats, and other (2) The distribution in species of
+cats that are taken to the animal shelter in Los Angeles (3) The percentage of animals that are euthanized in these
+animals shelter.
