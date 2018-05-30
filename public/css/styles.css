@@ -48,8 +48,8 @@ h3, h4, h5, h6, p {
     z-index: 1;
 }
 
-@media(max-width: 768px){
-    .btn{
+@media(max-width: 768px) {
+    .btn {
         width: 60vw;
     }
 }
@@ -132,7 +132,7 @@ ul {
 }
 
 @media(max-width: 768px) {
-    .title-text{
+    .title-text {
         font-size: 15vw;
     }
     h2 {
@@ -153,7 +153,7 @@ ul {
     animation: pulse1 1.5s linear infinite;
 }
 
-.logo{
+.logo {
     width: 30vh;
 }
 
@@ -226,16 +226,14 @@ hr {
     box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, .9);
 }
 
-@media(max-width: 768px){
-    .index-titletext{
+@media(max-width: 768px) {
+    .index-titletext {
         height: 50vh;
     }
-
-    .index-subtext{
+    .index-subtext {
         height: 50vh;
     }
-
-    .subtext{
+    .subtext {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -472,6 +470,12 @@ hr {
     margin: 0 5vw 10vw 5vw;
 }
 
+@media(max-width: 768px) {
+    #doneCustomize {
+        margin-bottom: 10vw;
+    }
+}
+
 /************************ END CUSTOMIZE PAGE **************************/
 
 /************************ CAT PICTURES PANEL *************************/
@@ -520,7 +524,7 @@ hr {
     margin-bottom: 5%;
 }
 
-.graph-buttons{
+.graph-buttons {
     margin: 5% 0;
 }
 
