@@ -66,68 +66,98 @@
 				</p>
 
 
-				<div class="col">
-					<div class="col-sm-6 graph">
-						<h3>Animals taken to shelters in Los Angeles:</h3>
-						<div id="chart1"></div>
-						<script>
-							const numTotalPets = 187593;
-							const numCats = 63853;
-							const numDogs = 102013;
-							const numHorses = 70;
-							const numOther = 21658;
-							var chart1 = c3.generate({
-								bindto: '#chart1',
-								data: {
-									columns: [
-										['cats', numCats],
-										['dogs', numDogs],
-										['equine', numHorses],
-										['other', numOther]
-									],
-									type: 'pie'
-								}
-							});
-						</script>
+				<div class="row">
+					<div class="col">
+						<div class="col-sm-6 graph">
+							<h3>Animals taken to shelters in Los Angeles:</h3>
+							<div id="chart1"></div>
+							<script>
+								const numTotalPets = 187593;
+								const numCats = 63853;
+								const numDogs = 102013;
+								const numHorses = 70;
+								const numOther = 21658;
+								var chart1 = c3.generate({
+									bindto: '#chart1',
+									data: {
+										columns: [
+											['Cats', numCats],
+											['Dogs', numDogs],
+											['Equine', numHorses],
+											['Other', numOther]
+										],
+										type: 'pie'
+									}
+								});
+							</script>
+						</div>
+						<div class="col-sm-6 graph">
+							<h3>Species of cats taken to shelters in Los Angeles: </h3>
+							<div id="chart2"></div>
+							<script>
+								const domSH = 52231;
+								const domLH = 2941;
+								const bombay = 12;
+								const persian = 107;
+								const mainecoon = 187;
+								const siamese = 1536;
+								const amerSH = 1430;
+								const russBlue = 241;
+								const abyssinian = 95;
+								const ragdoll = 55;
+								var chart2 = c3.generate({
+									bindto: '#chart2',
+									data: {
+										columns: [
+											['Domestic ShortHair', domSH],
+											['Domestic LongHair', domLH],
+											['Bombay', bombay],
+											['Persian', persian],
+											['Maine Coon', mainecoon],
+											['Siamese', siamese],
+											['American Shorthair', amerSH],
+											['Russian Blue', russBlue],
+											['Abyssinian', abyssinian],
+											['Ragdoll', ragdoll]
+										],
+										type: 'pie'
+									}
+								});
+							</script>
+						</div>
 					</div>
-					<div class="col-sm-6 graph">
-						<h3>Species of cats taken to shelters in Los Angeles: </h3>
-						<div id="chart2"></div>
-						<script>
-							const domSH = 52231;
-							const domLH = 2941;
-							const bombay = 12;
-							const persian = 107;
-							const mainecoon = 187;
-							const siamese = 1536;
-							const amerSH = 1430;
-							const russBlue = 241;
-							const abyssinian = 95;
-							const ragdoll = 55;
-							var chart2 = c3.generate({
-								bindto: '#chart2',
-								data: {
-									columns: [
-										['Domestic ShortHair', domSH],
-										['Domestic LongHair', domLH],
-										['Bombay', bombay],
-										['Persian', persian],
-										['Maine Coon', mainecoon],
-										['Siamese', siamese],
-										['American Shorthair', amerSH],
-										['Russian Blue', russBlue],
-										['Abyssinian', abyssinian],
-										['Ragdoll', ragdoll]
-									],
-									type: 'pie'
-								}
-							});
-						</script>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="col-sm-6 graph">
+							<h3>Animal Shelter Euthanasia</h3>
+							<p>According to <a href="https://www.aspca.org/blog/too-many-people-are-still-not-adopting-animals-0">ASPCA:</a></p>
+							<div id="chart3"></div>
+							<script>
+								var chart3 = c3.generate({
+									bindto: '#chart3',
+									data: {
+										columns: [
+											['Euthanized animals', 2700000],
+											['Non-euthanized animals', 7600000-270000]
+										],
+										type: 'pie'
+									}
+								});
+							</script>
+						</div>
+						<div class="col-sm-6">
+							<h3>Cat Facts!</h3>
+							<p>According to <a href="https://www.aspca.org/animal-homelessness/shelter-intake-and-surrender/pet-statistics">ASPCA</a> and the <a href="http://americanpetproducts.org/Uploads/MemServices/GPE2017_NPOS_Seminar.pdf"> APPMA</a>:</p>
+							<p>6.5 million companion animals come into US animal shelters every year. 3.2 million of them are cats.</p>
+							<p>20% of cats in American homes were adopted from a shelter.</p>
+							<p>5% of cat owners hold holiday/birthday parties for their cat(s).</p>
+						</div>
 					</div>
 				</div>
 
 				<div class="graph-buttons">
-					<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Alternatively, build a cat!</button>
+					<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Build a cat!</button>
 					<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
 						<button type="button" class="btn btn-primary" id="checkCats">Or adopt a cat near you</button>
 					</a>
