@@ -19,15 +19,53 @@
 
 	<div>
 		<div class="navbar">
+			<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="/index">
+							<img class="home-button" src="images/house-logo.png" onclick="location.href='/index'" />
+						</a>
+					</li>
+					<li>
+						<a href="/customize">
+							<img class="home-button" src="images/cat-logo.png" />
+						</a>
+					</li>
+					<li>
+						<a href="/checkshelters">
+							<img class="home-button" src="images/stats-logo.png" onclick="location.href='/checkshelters'" />
+						</a>
+					</li>
+					<li>
+						<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
+							<img class="home-button" src="images/adopt-logo.png" />
+						</a>
+					</li>
+					<li>
+						<a>
+							<button class="home-button" data-toggle="modal" data-target="#myModal">?</button>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		{{!--
+		<div class="navbar navbar-expand-md">
 			<img class="home-button" src="images/house-logo.png" onclick="location.href='/index'" />
 			<img class="home-button" src="images/cat-logo.png" onclick="location.href='customize'" />
 			<img class="home-button" src="images/stats-logo.png" onclick="location.href='/checkshelters'" />
 			<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
-				<img class="home-button" src="images/adopt-logo.png"/>
+				<img class="home-button" src="images/adopt-logo.png" />
 			</a>
 
 			<button class="home-button" data-toggle="modal" data-target="#myModal">?</button>
-		</div>
+		</div> --}}
 
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog">
@@ -67,45 +105,48 @@
 					<img src="images/catears_black.png" class="catHead img-responsive" id="catHead" />
 				</div>
 
-				<div class="col-lg-6 slidecontainer img-responsive">
-					<h3>Eyes</h3>
-					<div>
+				<div id="_sliders" class="col-lg-6 img-responsive sliders">
+					<div class="slidecontainer">
+						<h3>Eyes</h3>
 						<input type="range" min="1" max="100" value="50" class="slider" id="myRange" hspace="20">
 						<p>Value:
 							<span id="demo"></span>
 						</p>
 					</div>
 
-					<h3>Ears</h3>
-					<div>
+					<div class="slidecontainer">
+						<h3>Ears</h3>
 						<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
 						<p>Value:
 							<span id="demo2"></span>
 						</p>
 					</div>
 
-					<h3>Eyes to mouth</h3>
-					<div>
+					<div class="slidecontainer">
+						<h3>Eyes to mouth</h3>
 						<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
 						<p>Value:
 							<span id="demo3"></span>
 						</p>
 					</div>
 
-					<h3>Color:
+					<h3 class="slidecontainer">Color:
 						<span id="colorName">black</span>
 					</h3>
-					<div class="btn btn-hover black" onclick="updateColor('black')"></div>
-					<div class="btn btn-hover dark-grey" onclick="updateColor('dark grey')"></div>
-					<div class="btn btn-hover light-grey" onclick="updateColor('light grey')"></div>
-					<div class="btn btn-hover white" onclick="updateColor('white')"></div>
-					<div class="btn btn-hover brown" onclick="updateColor('brown')"></div>
-					<div class="btn btn-hover orange" onclick="updateColor('orange')"></div>
-					<br/>
-					<br/>
+					<div class="colorcontainer">
+						<div class="btn btn-hover black" onclick="updateColor('black')"></div>
+						<div class="btn btn-hover dark-grey" onclick="updateColor('dark grey')"></div>
+						<div class="btn btn-hover light-grey" onclick="updateColor('light grey')"></div>
+						<div class="btn btn-hover white" onclick="updateColor('white')"></div>
+						<div class="btn btn-hover brown" onclick="updateColor('brown')"></div>
+						<div class="btn btn-hover orange" onclick="updateColor('orange')"></div>
+						<br/>
+						<br/>
+					</div>
+
 
 					<!-- text-center, btn class are from bootstrap css -->
-					<div class="text-right customize-buttons">
+					<div class="customize-buttons">
 						<button type="button" class="btn btn-primary" id="doneCustomize" style="background-color: #77d68f">Show me my cats!</button>
 					</div>
 
@@ -124,7 +165,7 @@
 				<button type="button" class="btn btn-danger" id="backResults">Build another cat!</button>
 			</div>
 			<div class="text-center" style="padding:10px">
-				<button type="button" class="btn btn-primary" onclick="location.href='/checkshelters'">Check out cat adoptions</button>
+				<button type="button" class="btn btn-primary" onclick="location.href='/checkshelters'">Check out Cat Facts!</button>
 			</div>
 		</div>
 	</div>

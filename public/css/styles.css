@@ -7,6 +7,7 @@ html {
 
 body {
     background-color: #eddbcd;
+    height: 100vh;
 }
 
 h1 {
@@ -16,13 +17,13 @@ h1 {
     color: rgb(80, 80, 80);
 }
 
-h2{
+h2 {
     font-family: 'Coming Soon', cursive;
     font-size: 4vw;
     color: rgb(80, 80, 80);
 }
 
-h3{
+h3 {
     font-size: 1.9vw;
 }
 
@@ -35,6 +36,7 @@ h3, h4, h5, h6, p {
     color: white;
     transition: all 0.3s;
     margin: 0;
+    width: 15vw;
 }
 
 .btn::before, .btn::after {
@@ -44,6 +46,12 @@ h3, h4, h5, h6, p {
     bottom: 0;
     left: 0;
     z-index: 1;
+}
+
+@media(max-width: 768px){
+    .btn{
+        width: 60vw;
+    }
 }
 
 /* BTN HOVER */
@@ -118,6 +126,23 @@ h3, h4, h5, h6, p {
     font-size: 7vw;
     padding-top: 3vw;
 }
+
+ul {
+    list-style-type: none;
+}
+
+@media(max-width: 768px) {
+    .title-text{
+        font-size: 15vw;
+    }
+    h2 {
+        font-size: 10vw;
+    }
+    h3 {
+        font-size: 5vw;
+    }
+}
+
 /************************* END DEFAULT STYLES ************************/
 
 /************************* INDEX ********************************/
@@ -126,6 +151,10 @@ h3, h4, h5, h6, p {
     -webkit-animation: pulse1 1.5s linear infinite;
     -moz-animation: pulse1 1.5s linear infinite;
     animation: pulse1 1.5s linear infinite;
+}
+
+.logo{
+    width: 30vh;
 }
 
 @keyframes pulse1 {
@@ -174,11 +203,11 @@ h3, h4, h5, h6, p {
     }
 }
 
-.index-titletext{
+.index-titletext {
     height: 60%;
 }
 
-.index-subtext{
+.index-subtext {
     background-color: #e49352;
     color: white;
     height: 35%;
@@ -186,34 +215,59 @@ h3, h4, h5, h6, p {
     margin-top: -2px;
 }
 
-.index-subtext h3{
+.index-subtext h3 {
     margin-top: -20px;
 }
 
-hr{
+hr {
     z-index: 999;
-    height: 20px; 
+    height: 20px;
     border: 0;
     box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, .9);
+}
+
+@media(max-width: 768px){
+    .index-titletext{
+        height: 50vh;
+    }
+
+    .index-subtext{
+        height: 50vh;
+    }
+
+    .subtext{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /************************* END INDEX ********************************/
 
 /************************ CUSTOMIZE PAGE **************************/
-.customize{
+
+.customize {
     box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, .9);
     width: 86%;
     margin-left: 7%;
 }
 
-.customize-body{
+.customize-body {
     margin-top: -2%;
 }
 
 .customize-cat {
     padding-top: 1%;
     padding-left: 10%;
-    height: 100%;
+}
+
+@media(max-width: 768px) {
+    .customize-cat {
+        margin-left: auto;
+        margin-right: auto;
+        width: 72%;
+        padding: 0;
+    }
 }
 
 .slidecontainer {
@@ -231,6 +285,25 @@ hr{
     -webkit-transition: .2s;
     transition: opacity .2s;
     padding: 0 10px 0 10px;
+}
+
+.colorcontainer {
+    margin-left: 5%;
+}
+
+@media(max-width: 768px) {
+    .slider {
+        width: 100%;
+    }
+    .slidecontainer {
+        width: 90%;
+        margin-left: 5%;
+        padding: 0;
+    }
+    .colorcontainer {
+        margin-left: 10%;
+        margin-top: 8%;
+    }
 }
 
 .slider:hover {
@@ -254,39 +327,17 @@ hr{
     cursor: pointer;
 }
 
-.slidecontainer .customize-buttons {
-    margin-right: 20%;
+.customize-buttons {
+    margin-left: 55%;
 }
 
-/*.parent{
-    width:100px;
-    height:50px;
-    position:absolute;
-    z-index:0;
+@media(max-width: 768px) {
+    .customize-buttons {
+        text-align: center;
+        margin-bottom: 10%;
+        margin-left: 0;
+    }
 }
-
-.inner{
-    position:absolute;
-    z-index:1;
-    bottom:0;
-    right:20px;
-} */
-
-/*
-.cat {
-  position: relative;
-  display: inline;
-  width: 30%
-  height: auto;
-}
-
-.imtip {
-  position: absolute;
-  bottom: 0px;
-  right: 80px;
-  width: 30%;
-  height: auto;
-} */
 
 .catFace {
     position: relative;
@@ -328,7 +379,7 @@ hr{
     z-index: 2;
 }
 
-.catHead{
+.catHead {
     position: relative;
     width: 32vw;
     height: 7vw;
@@ -337,31 +388,87 @@ hr{
     z-index: 1;
 }
 
-.navbar{
+@media(max-width: 768px) {
+    .catFace {
+        width: 72vw;
+    }
+    .leftEye {
+        width: 12vw;
+        right: -17vw;
+        bottom: 41vw;
+    }
+    .rightEye {
+        right: -44vw;
+        bottom: 53vw;
+        width: 12vw;
+    }
+    .catMouth {
+        width: 60vw;
+        bottom: 83vw;
+        right: -7vw;
+    }
+    .catHead {
+        width: 64vw;
+        left: 4vw;
+    }
+    .sliders {
+        margin-top: -95vw;
+    }
+}
+
+.navbar {
     position: fixed;
     background-color: transparent;
     box-shadow: none;
-    left: 95%;
+    left: 94%;
     z-index: 999;
     width: 5%;
 }
 
-.home-button{
+.navbar-nav>li>a {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.navbar .navbar-toggle .icon-bar {
+    border: 2px black solid;
+}
+
+.home-button {
     width: 3.5vw;
     height: 3.5vw;
     margin: 4% 0;
     transition: .2s;
     border-radius: 50%;
-    background-color: #a09b9a; 
+    background-color: #a09b9a;
     color: white;
+    font-size: 1.5vw;
 }
 
-.home-button:hover{
+@media(max-width: 768px) {
+    .home-button {
+        width: 10vw;
+        height: 10vw;
+        margin: 4% 0 4% 12%;
+        font-size: 5vw;
+    }
+    .navbar {
+        left: 85%;
+        width: 12%;
+        background-color: rgb(255, 255, 255, .5);
+        padding: 0;
+    }
+    .navbar-toggle {
+        margin: 15% 0;
+    }
+}
+
+.home-button:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
-#resultsPage{
+#resultsPage {
     margin: 0 5vw 10vw 5vw;
 }
 
@@ -380,6 +487,18 @@ hr{
     margin: 0 5vw 5vw 5vw;
 }
 
+@media(max-width: 768px) {
+    #photos {
+        -webkit-column-count: 1;
+        -webkit-grid-column-gap: 10px;
+        -moz-column-count: 1;
+        -moz-grid-column-gap: 10px;
+        column-count: 1;
+        grid-column-gap: 10px;
+        margin: 0 0 5vw 5vw;
+    }
+}
+
 #photos img {
     /* Just in case there are inline attributes */
     width: 93% !important;
@@ -388,28 +507,24 @@ hr{
     border-radius: 10px;
 }
 
-
 /************************ END CAT PICTURES PANEL *************************/
-
 
 /************************ CAT FACTS ************************/
 
-.text-content{
+.text-content {
     padding: 0 15%;
     text-align: center;
 }
 
-.graph{
+.graph {
     margin-bottom: 5%;
 }
 
 .graph-buttons{
     margin: 5% 0;
 }
+
 /************************ END CAT FACTS ************************/
-
-
-
 
 /************************* MISC ******************************/
 

@@ -13,7 +13,24 @@ let nose_mouthApart = slider3.value;
 let customizeOrResult = "customize";
 let requestURL = '';
 let color = 'black';
+let mobile = false;
+let ear_height = 7;
+let ear_bottom = 70.75;
 
+var x = window.matchMedia("(max-width: 768px)");
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes 
+
+function myFunction(x){
+	if(x.matches){
+		mobile = true;
+		ear_height = 13;
+		ear_bottom = 139.75;
+	}
+	else{
+		mobile = false;
+	}
+}
 
 // SLIDER 1
 output1.innerHTML = slider1.value;
@@ -21,6 +38,11 @@ output1.innerHTML = slider1.value;
 updateEyes = function(){
 	let leftMove = -((eyesApart - 50));
 	let rightMove = ((eyesApart - 50));
+
+	if(mobile){
+		leftMove = -((eyesApart - 50)) * .5;
+		rightMove = ((eyesApart - 50)) * .5;
+	}
 
 	document.getElementById("leftEyeball").style.marginLeft = leftMove;
 	document.getElementById("rightEyeball").style.marginLeft = rightMove;
@@ -37,12 +59,17 @@ slider1.oninput = function () {
 // SLIDER 2
 output2.innerHTML = slider2.value;
 
-const ear_height = 7;
-const ear_bottom = 70.75;
-
 updateEars = function(){
 	let new_ears = ear_height + ((earsApart - 50) * .025);
 	let new_bottom = ear_bottom + ((earsApart - 50) * .025);
+	let slider_top = -95 - ((earsApart-50) * .025);
+
+	if(mobile){
+		new_ears = ear_height + ((earsApart - 50) * .1);
+		new_bottom = ear_bottom + ((earsApart - 50) * .1);
+		slider_top = -95 - ((earsApart-50) * .1);
+		document.getElementById("_sliders").style.marginTop = slider_top + "vw";
+	}
 
 	document.getElementById("catHead").style.height = new_ears + "vw";
 	document.getElementById("catHead").style.bottom = new_bottom + "vw";
@@ -56,7 +83,6 @@ slider2.oninput = function () {
 }
 
 
-
 // SLIDER 3 
 output3.innerHTML = slider3.value;
 
@@ -65,6 +91,13 @@ updateNoseMouth = function () {
 	let rightEyeDown = -((nose_mouthApart - 50) / 15);
 	let mouthMove = 2 * ((nose_mouthApart - 50));
 	let earMove = (-(mouthMove) / 2) - rightEyeDown;
+
+	if(mobile){
+		leftEyeDown = -((nose_mouthApart - 50) * .5);
+		rightEyeDown = -((nose_mouthApart - 50) / 15) * .5;
+		mouthMove = ((nose_mouthApart - 50));
+		earMove = (-(mouthMove) / 2) - rightEyeDown;
+	}
 
 	document.getElementById("rightEyeball").style.marginTop = rightEyeDown;
 	document.getElementById("leftEyeball").style.marginTop = leftEyeDown;
@@ -110,7 +143,6 @@ updateColor = function (c) {
 		document.getElementById('catHead').src = "images/catears_orange.png";
 	}
 }
-
 
 $('#backCustomize').click(() => {
 	window.location = "index";
