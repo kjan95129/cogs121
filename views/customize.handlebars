@@ -4,12 +4,18 @@
 	<title>Build-A-Cat</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
+
 
 
 	<body>
@@ -171,7 +177,22 @@
 	</div>
 
 
+
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+ 		var config = {
+    	apiKey: "AIzaSyAp3DYmCAGJNKpsrCIbDD-mdKP7RnbpG9k",
+    	authDomain: "build-a-cat.firebaseapp.com",
+    	databaseURL: "https://build-a-cat.firebaseio.com",
+    	projectId: "build-a-cat",
+    	storageBucket: "build-a-cat.appspot.com",
+    	messagingSenderId: "327541641073"
+  		};
+  		firebase.initializeApp(config);
+	</script>
 	<script src="js/customize.js"></script>
+	<script src="js/collection.js"></script>
 
 </body>
 
