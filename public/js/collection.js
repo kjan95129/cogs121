@@ -48,12 +48,47 @@ $(document).ready(() => {
 			});
 		}
 
-		database.ref('cats/eyes/').push(eyesApart);
-		database.ref('cats/ears/').push(earsApart);
-		database.ref('cats/eyes to mouth/').push(nose_mouthApart);
+		database.ref('cats/color/black/number').on('value', (snapshot) => {
+			var changeBlack = snapshot.val();
+			if (changeBlack) {
+				localStorage.setItem("black", JSON.stringify(changeBlack));
+			}
+		});
 
+		database.ref('cats/color/darkgrey/number').on('value', (snapshot) => {
+			var changedarkgrey = snapshot.val();
+			if (changedarkgrey) {
+				localStorage.setItem("darkgrey", JSON.stringify(changedarkgrey));
+			}
+		});
 
+		database.ref('cats/color/lightgrey/number').on('value', (snapshot) => {
+			var changeLightGrey = snapshot.val();
+			if (changeLightGrey) {
+				localStorage.setItem("lightgrey", JSON.stringify(changeLightGrey));
+			}
+		});
 
+		database.ref('cats/color/white/number').on('value', (snapshot) => {
+			var changeWhite = snapshot.val();
+			if (changeWhite) {
+				localStorage.setItem("white", JSON.stringify(changeWhite));
+			}
+		});
+
+		database.ref('cats/color/brown/number').on('value', (snapshot) => {
+			var changeBrown = snapshot.val();
+			if (changeBrown) {
+				localStorage.setItem("brown", JSON.stringify(changeBrown));
+			}
+		});
+
+		database.ref('cats/color/orange/number').on('value', (snapshot) => {
+			var changeOrange = snapshot.val();
+			if (changeOrange) {
+				localStorage.setItem("orange", JSON.stringify(changeOrange));
+			}
+		});
 	});
 
 });
