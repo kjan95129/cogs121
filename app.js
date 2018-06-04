@@ -1,4 +1,10 @@
-
+/*
+File: app.js
+Purpose: The web server that allows the user to interact with the application
+through HTTP requests that move the user through different web pages and grab
+information from the SQLite database. Starting the server allows users to
+connect to the application and interact with the application. 
+*/
 /**
  * Module dependencies.
  */

@@ -1,3 +1,13 @@
+/*
+File: public/js/customize.js
+Purpose: The corresponding JavaScript file to the Customize page that makes
+the user inputs correspond to the responsiveness of the page. The user input
+values on the sliders become lined up with the values of the cat photos
+to see the cat representative's facial features change as well. After we
+grab the values of each of the facial features the user wants, we make an
+Ajax call to grab the best-matching photos from the SQLite database.
+*/
+
 const slider1 = document.getElementById("myRange");
 const output1 = document.getElementById("demo");
 
@@ -71,7 +81,7 @@ updateNoseMouth = function () {
 
 var x = window.matchMedia("(max-width: 768px)");
 myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes 
+x.addListener(myFunction) // Attach listener function on state changes
 
 function myFunction(x){
 	if(x.matches){
@@ -114,7 +124,7 @@ slider2.oninput = function () {
 }
 
 
-// SLIDER 3 
+// SLIDER 3
 output3.innerHTML = slider3.value;
 
 updateNoseMouth();
@@ -125,7 +135,7 @@ slider3.oninput = function () {
 }
 
 
-// TODO 
+// TODO
 // UPDATE THIS COLOR VARIABLE BASED ON INPUT
 updateColor = function (c) {
 	color = c;
@@ -187,12 +197,6 @@ $('#doneCustomize').click(() => {
 					pictureCount = pictureCount + 1;
 					dataToDisplay = "<img src='" + e.picture + "'/>";
 					document.getElementById('photos').innerHTML += dataToDisplay;
-					// if (pictureCount <= 5) {
-					// 	document.getElementById('catResults1').innerHTML += dataToDisplay;
-					// }
-					// else {
-					// 	document.getElementById('catResults2').innerHTML += dataToDisplay;
-					// }
 				}
 
 			} else {

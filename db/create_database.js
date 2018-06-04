@@ -1,3 +1,11 @@
+/*
+File: db/create_database.js
+Purpose: Node.js + Express server backend for Build-A-Cat. This file contains all
+of the database queries to establish the cat image database with the distance
+between the eyes of a cat, the distance between the nose and the mouth, the
+length of the ears, the color of the cat, and the url of the cat image.
+*/
+
 // Node.js + Express server backend for build-a-cat
 // v2 - use SQLite (https://www.sqlite.org/index.html) as a database
 //
