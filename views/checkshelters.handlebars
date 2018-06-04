@@ -38,7 +38,7 @@ again, or click a button to take the users to a pet adoption website.
 
 			database.ref('cats/color/black/number').once('value', (snapshot) => {
 				black = snapshot.val();
-				console.log("Black value in js is: "+black);
+				console.log("Black value in js is: " + black);
 				localStorage.setItem("black", JSON.stringify(black));
 			});
 			database.ref('cats/color/darkgrey/number').once('value', (snapshot) => {
@@ -118,12 +118,7 @@ again, or click a button to take the users to a pet adoption website.
 							<h4 class="modal-title">Help! What do I do?</h4>
 						</div>
 						<div class="modal-body">
-							<p>Adjust the dot on the sliders to customize the distance between the cat's eyes, ears, and eyes to mouth. After you
-								are finished, click "SHOW ME MY CATS!" to find the cat matches based on your customization!
-								<p> If you wish to make changes to your ideal cat, click the "BUILD ANOTHER CAT!" button to go back to the customize
-									page.
-								</p>
-							</p>
+							<p>Hover over the graphs for more information! These graphs are for you to visualize some statistics and facts.</p>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -224,7 +219,35 @@ again, or click a button to take the users to a pet adoption website.
 								});
 							</script>
 						</div>
-						<div class="col-sm-6">
+
+						<div class="col-sm-6 graph">
+							<h3>Users' cat color choices:</h3>
+							<div id="chart4"></div>
+							<script>
+								var chart4 = c3.generate({
+									bindto: '#chart4',
+									data: {
+										columns: [
+											['Black', JSON.parse(localStorage.getItem("black"))],
+											['Dark Grey', JSON.parse(localStorage.getItem("darkgrey"))],
+											['Light Grey', JSON.parse(localStorage.getItem("lightgrey"))],
+											['White', JSON.parse(localStorage.getItem("white"))],
+											['Brown', JSON.parse(localStorage.getItem("brown"))],
+											['Orange', JSON.parse(localStorage.getItem("orange"))]
+										],
+										type: 'bar'
+									}
+								});
+								console.log("Black in handlebars is: " + JSON.parse(localStorage.getItem("black")));
+							</script>
+						</div>
+					</div>
+				</div>
+				
+				<hr class="customize"/>
+				<div class="row">
+					<div class="col">
+						<div class="col-sm-12">
 							<h3>Cat Facts!</h3>
 							<p>According to
 								<a href="https://www.aspca.org/animal-homelessness/shelter-intake-and-surrender/pet-statistics">ASPCA</a> and the
@@ -235,57 +258,32 @@ again, or click a button to take the users to a pet adoption website.
 						</div>
 					</div>
 				</div>
-				<div class="row">
-						<div class="col">
-							<div class="col-sm-6 graph">
-								<h3>Users' cat color choices:</h3>
-								<div id="chart4"></div>
-								<script>
-									var chart4 = c3.generate({
-										bindto: '#chart4',
-										data: {
-											columns: [
-												['Black', JSON.parse(localStorage.getItem("black"))],
-												['Dark Grey', JSON.parse(localStorage.getItem("darkgrey"))],
-												['Light Grey', JSON.parse(localStorage.getItem("lightgrey"))],
-												['White', JSON.parse(localStorage.getItem("white"))],
-												['Brown', JSON.parse(localStorage.getItem("brown"))],
-												['Orange', JSON.parse(localStorage.getItem("orange"))]
-											],
-												type: 'bar'
-										}
-									});
-									console.log("Black in handlebars is: "+JSON.parse(localStorage.getItem("black")));
-								</script>
-							</div>
-						</div>
+				<div class="graph-buttons">
+					<div>
+						<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Build a cat!</button>
 					</div>
-					<div class="graph-buttons">
-						<div>
-							<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Build a cat!</button>
-						</div>
-						<div style="padding:10px;">
-							<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
-								<button type="button" class="btn btn-primary" id="checkCats">Adopt a cat!</button>
-							</a>
-						</div>
+					<div style="padding:10px;">
+						<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
+							<button type="button" class="btn btn-primary" id="checkCats">Adopt a cat!</button>
+						</a>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 	<script>
-  		// Initialize Firebase
- 		var config = {
-    	apiKey: "AIzaSyAp3DYmCAGJNKpsrCIbDD-mdKP7RnbpG9k",
-    	authDomain: "build-a-cat.firebaseapp.com",
-    	databaseURL: "https://build-a-cat.firebaseio.com",
-    	projectId: "build-a-cat",
-    	storageBucket: "build-a-cat.appspot.com",
-    	messagingSenderId: "327541641073"
-  		};
-  		firebase.initializeApp(config);
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyAp3DYmCAGJNKpsrCIbDD-mdKP7RnbpG9k",
+			authDomain: "build-a-cat.firebaseapp.com",
+			databaseURL: "https://build-a-cat.firebaseio.com",
+			projectId: "build-a-cat",
+			storageBucket: "build-a-cat.appspot.com",
+			messagingSenderId: "327541641073"
+		};
+		firebase.initializeApp(config);
 	</script>
 
 </body>
