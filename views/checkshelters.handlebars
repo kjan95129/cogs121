@@ -15,8 +15,47 @@
 	<link rel="stylesheet" href="css/material-kit.css">
 	<link rel="stylesheet" href="css/styles.css">
 
+	<script>
+	let black = 0;
+	let darkgrey = 0;
+	let lightgrey = 0;
+	let white = 0;
+	let brown = 0;
+	let orange = 0;
 
-	<body>
+	$(document).ready(() => {
+		const database = firebase.database();
+
+		database.ref('cats/color/black/number').once('value', (snapshot) => {
+			black = snapshot.val();
+			console.log("Black value in js is: "+black);
+			localStorage.setItem("black", JSON.stringify(black));
+		});
+		database.ref('cats/color/darkgrey/number').once('value', (snapshot) => {
+			darkgrey = snapshot.val();
+			localStorage.setItem("darkgrey", JSON.stringify(darkgrey));
+		});
+		database.ref('cats/color/lightgrey/number').once('value', (snapshot) => {
+			lightgrey = snapshot.val();
+			localStorage.setItem("lightgrey", JSON.stringify(lightgrey));
+		});
+		database.ref('cats/color/white/number').once('value', (snapshot) => {
+			white = snapshot.val();
+			localStorage.setItem("white", JSON.stringify(white));
+		});
+		database.ref('cats/color/brown/number').once('value', (snapshot) => {
+			brown = snapshot.val();
+			localStorage.setItem("brown", JSON.stringify(brown));
+		});
+		database.ref('cats/color/orange/number').once('value', (snapshot) => {
+			orange = snapshot.val();
+			localStorage.setItem("orange", JSON.stringify(orange));
+		});
+
+	});
+		// console.log("Black in handlebars is: "+black);
+	</script>
+
 </head>
 
 <body>
@@ -186,25 +225,58 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="graph-buttons">
-					<div>
-						<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Build a cat!</button>
+				<div class="row">
+						<div class="col">
+							<div class="col-sm-6 graph">
+								<h3>Users' cat color choices:</h3>
+								<div id="chart4"></div>
+								<script>
+									var chart4 = c3.generate({
+										bindto: '#chart4',
+										data: {
+											columns: [
+												['Black', JSON.parse(localStorage.getItem("black"))],
+												['Dark Grey', JSON.parse(localStorage.getItem("darkgrey"))],
+												['Light Grey', JSON.parse(localStorage.getItem("lightgrey"))],
+												['White', JSON.parse(localStorage.getItem("white"))],
+												['Brown', JSON.parse(localStorage.getItem("brown"))],
+												['Orange', JSON.parse(localStorage.getItem("orange"))]
+											],
+												type: 'bar'
+										}
+									});
+									console.log("Black in handlebars is: "+JSON.parse(localStorage.getItem("black")));
+								</script>
+							</div>
+						</div>
 					</div>
-					<div style="padding:10px;">
-						<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
-							<button type="button" class="btn btn-primary" id="checkCats">Adopt a cat!</button>
-						</a>
+					<div class="graph-buttons">
+						<div>
+							<button type="button" class="btn btn-danger" id="backResults" onclick="location.href='/customize'">Build a cat!</button>
+						</div>
+						<div style="padding:10px;">
+							<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
+								<button type="button" class="btn btn-primary" id="checkCats">Adopt a cat!</button>
+							</a>
+						</div>
 					</div>
-				</div>
-
-				<div>
-				</div>
 			</div>
 		</div>
 	</div>
 
-	<script src="js/checkshelters.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+ 		var config = {
+    	apiKey: "AIzaSyAp3DYmCAGJNKpsrCIbDD-mdKP7RnbpG9k",
+    	authDomain: "build-a-cat.firebaseapp.com",
+    	databaseURL: "https://build-a-cat.firebaseio.com",
+    	projectId: "build-a-cat",
+    	storageBucket: "build-a-cat.appspot.com",
+    	messagingSenderId: "327541641073"
+  		};
+  		firebase.initializeApp(config);
+	</script>
 
 </body>
 
