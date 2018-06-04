@@ -1,45 +1,46 @@
-Final Markdown Document
+# Final Markdown Document #
 
 Team: .cat
 Due: June 4, 2018
 
-Hee Ro Chung:
-  Wrote the milestone markdowns
-  Worked on cat image manipulation and connected user slider inputs to distances between the cat's facial
+**Hee Ro Chung:**
+  * Wrote the milestone markdowns
+  * Worked on cat image manipulation and connected user slider inputs to distances between the cat's facial
   features
-  Worked on css 
-  Worked on Firebase structure and used Firebase to store, retrieve, display, and update user preferences on
+  * Worked on css
+  * Worked on Firebase structure and used Firebase to store, retrieve, display, and update user preferences on
   their choice of cat fur color in real time through data visualization
 
-Kevin Jan:
-  Set up, cleaned up, maintained repo
-  Visual design for all of the pages (CSS stuff)
-  Navbar & page linking
-  Set up SQLite for photo storage and retrieval
-  Connected slider input with SQLite backend & photo retrieval
-  Color choosing on both front end
-  Code cleanup and correction for most of front end
-  Mobile responsiveness
+**Kevin Jan:**
+  * Set up, cleaned up, maintained repo
+  * Visual design for all of the pages (CSS stuff)
+  * Navbar & page linking
+  * Set up SQLite for photo storage and retrieval
+  * Connected slider input with SQLite backend & photo retrieval
+  * Color choosing on both front end
+  * Code cleanup and correction for most of front end
+  * Mobile responsiveness
 
 
-Sally Lai U:
-  Set up the skeleton of the website
-  Worked on cat image manipulation using photoshop to separate individual facial features, and connecting the slider
+**Sally Lai U:**
+  * Set up the skeleton of the website
+  * Worked on cat image manipulation using photoshop to separate individual facial features, and connecting the slider
   inputs to the distances between facial features
-  Made UI changes such as adding buttons
-  Set up the Firebase and stored the user input of the users' cat color preferences.
-  Recorded the narration of the final demo video
+  * Made UI changes such as adding buttons
+  * Set up the Firebase and stored the user input of the users' cat color preferences.
+  * Recorded the narration of the final demo video
 
-Kate Wong:
-  Pre-processed the cat images database and annotations to find the distances between the eyes, length of ears,
-  distance from the eyes to mouth, identifying the colors of the cats, and coming up with algorithm to find the
+**Kate Wong:**
+  * Pre-processed the cat images database and annotations to find the distances between the eyes, length of ears,
+  distance from the eyes to mouth
+  * Wrote script identifying the colors of the cats, and coming up with algorithm to find the
   cats the user actually wants (mapping the values from the database to what the user inputs)
-  Also added some of the data visualizations after parsing the data from the Los Angeles animal intake information
+  * Also added some of the data visualizations after parsing the data from the Los Angeles animal intake information
   in Python
 
 
 
-Source Code Files:
+**Source Code Files:**
 --- Note: The .ipynb files must be opened in Jupyter Notebook for the file description to appear at the top. Otherwise, it can
 be found towards the middle or bottom of the file ---
 
@@ -88,5 +89,5 @@ app.js - This is the web server that allows the user to interact with the applic
           move the user through the various web pages and grab information from the SQLite database.
 
 
-Final Demo Video:
+**Final Demo Video:**
 https://www.youtube.com/watch?v=V6b89_8pl-U&feature=youtu.be
