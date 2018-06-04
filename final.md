@@ -37,6 +37,7 @@ Due: June 4, 2018
   cats the user actually wants (mapping the values from the database to what the user inputs)
   * Also added some of the data visualizations after parsing the data from the Los Angeles animal intake information
   in Python
+  * Set up initial ajax calls between frontend and server
 
 
 
