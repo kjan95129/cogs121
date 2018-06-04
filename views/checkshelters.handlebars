@@ -26,44 +26,44 @@ again, or click a button to take the users to a pet adoption website.
 	<link rel="stylesheet" href="css/styles.css">
 
 	<script>
-	let black = 0;
-	let darkgrey = 0;
-	let lightgrey = 0;
-	let white = 0;
-	let brown = 0;
-	let orange = 0;
+		let black = 0;
+		let darkgrey = 0;
+		let lightgrey = 0;
+		let white = 0;
+		let brown = 0;
+		let orange = 0;
 
-	$(document).ready(() => {
-		const database = firebase.database();
+		$(document).ready(() => {
+			const database = firebase.database();
 
-		database.ref('cats/color/black/number').once('value', (snapshot) => {
-			black = snapshot.val();
-			console.log("Black value in js is: "+black);
-			localStorage.setItem("black", JSON.stringify(black));
-		});
-		database.ref('cats/color/darkgrey/number').once('value', (snapshot) => {
-			darkgrey = snapshot.val();
-			localStorage.setItem("darkgrey", JSON.stringify(darkgrey));
-		});
-		database.ref('cats/color/lightgrey/number').once('value', (snapshot) => {
-			lightgrey = snapshot.val();
-			localStorage.setItem("lightgrey", JSON.stringify(lightgrey));
-		});
-		database.ref('cats/color/white/number').once('value', (snapshot) => {
-			white = snapshot.val();
-			localStorage.setItem("white", JSON.stringify(white));
-		});
-		database.ref('cats/color/brown/number').once('value', (snapshot) => {
-			brown = snapshot.val();
-			localStorage.setItem("brown", JSON.stringify(brown));
-		});
-		database.ref('cats/color/orange/number').once('value', (snapshot) => {
-			orange = snapshot.val();
-			localStorage.setItem("orange", JSON.stringify(orange));
+			database.ref('cats/color/black/number').once('value', (snapshot) => {
+				black = snapshot.val();
+				console.log("Black value in js is: "+black);
+				localStorage.setItem("black", JSON.stringify(black));
+			});
+			database.ref('cats/color/darkgrey/number').once('value', (snapshot) => {
+				darkgrey = snapshot.val();
+				localStorage.setItem("darkgrey", JSON.stringify(darkgrey));
+			});
+			database.ref('cats/color/lightgrey/number').once('value', (snapshot) => {
+				lightgrey = snapshot.val();
+				localStorage.setItem("lightgrey", JSON.stringify(lightgrey));
+			});
+			database.ref('cats/color/white/number').once('value', (snapshot) => {
+				white = snapshot.val();
+				localStorage.setItem("white", JSON.stringify(white));
+			});
+			database.ref('cats/color/brown/number').once('value', (snapshot) => {
+				brown = snapshot.val();
+				localStorage.setItem("brown", JSON.stringify(brown));
+			});
+			database.ref('cats/color/orange/number').once('value', (snapshot) => {
+				orange = snapshot.val();
+				localStorage.setItem("orange", JSON.stringify(orange));
+			});
+
 		});
 
-	});
-		// console.log("Black in handlebars is: "+black);
 	</script>
 
 </head>
