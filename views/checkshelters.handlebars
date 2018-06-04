@@ -1,10 +1,10 @@
 <!--
 File: views/customize.handlbars
 Purpose: The HTML files and components that are shown on the webpage. The
-data visualization (animal shelter statistics, cat facts, and a live visual 
+data visualization (animal shelter statistics, cat facts, and a live visual
 representation of users' preferences on cat colors) is shown to the user
 on this screen. There are also options to go back to home page, build a cat
-again, or click a button to take the users to a pet adoption website. 
+again, or click a button to take the users to a pet adoption website.
 -->
 
 
@@ -60,6 +60,51 @@ again, or click a button to take the users to a pet adoption website.
 			database.ref('cats/color/orange/number').once('value', (snapshot) => {
 				orange = snapshot.val();
 				localStorage.setItem("orange", JSON.stringify(orange));
+			});
+
+			database.ref('cats/color/').on('value', (snapshot) => {
+				const allColors = snapshot.val();
+				console.log('cats/color/ changed', allColors);
+				if (allColors) {
+					database.ref('cats/color/black/number').once('value', (snapshot) => {
+						black = snapshot.val();
+						localStorage.setItem("black", JSON.stringify(black));
+					});
+					database.ref('cats/color/darkgrey/number').once('value', (snapshot) => {
+						darkgrey = snapshot.val();
+						localStorage.setItem("darkgrey", JSON.stringify(darkgrey));
+					});
+					database.ref('cats/color/lightgrey/number').once('value', (snapshot) => {
+						lightgrey = snapshot.val();
+						localStorage.setItem("lightgrey", JSON.stringify(lightgrey));
+					});
+					database.ref('cats/color/white/number').once('value', (snapshot) => {
+						white = snapshot.val();
+						localStorage.setItem("white", JSON.stringify(white));
+					});
+					database.ref('cats/color/brown/number').once('value', (snapshot) => {
+						brown = snapshot.val();
+						localStorage.setItem("brown", JSON.stringify(brown));
+					});
+					database.ref('cats/color/orange/number').once('value', (snapshot) => {
+						orange = snapshot.val();
+						localStorage.setItem("orange", JSON.stringify(orange));
+					});
+					var chart4 = c3.generate({
+						bindto: '#chart4',
+						data: {
+							columns: [
+								['Black', JSON.parse(localStorage.getItem("black"))],
+								['Dark Grey', JSON.parse(localStorage.getItem("darkgrey"))],
+								['Light Grey', JSON.parse(localStorage.getItem("lightgrey"))],
+								['White', JSON.parse(localStorage.getItem("white"))],
+								['Brown', JSON.parse(localStorage.getItem("brown"))],
+								['Orange', JSON.parse(localStorage.getItem("orange"))]
+							],
+							type: 'bar'
+						}
+					});
+				}
 			});
 
 		});
@@ -243,7 +288,7 @@ again, or click a button to take the users to a pet adoption website.
 						</div>
 					</div>
 				</div>
-				
+
 				<hr class="customize"/>
 				<div class="row">
 					<div class="col">
