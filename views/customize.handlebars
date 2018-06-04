@@ -1,13 +1,19 @@
+<!--
+File: views/customize.handlbars
+Purpose: The HTML files and components that are shown on the webpage. The
+navbar, the sliders, and the cat image are all shown to the user on this screen.
+Then, after the user selects the facial features they want in a cat, the
+results are shown on the screen in place of all the options for user input.
+They are shown in an art gallery style format.
+-->
+
+
 <html>
 
 <head>
 	<title>Build-A-Cat</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -60,18 +66,6 @@
 				</ul>
 			</div>
 		</div>
-
-		{{!--
-		<div class="navbar navbar-expand-md">
-			<img class="home-button" src="images/house-logo.png" onclick="location.href='/index'" />
-			<img class="home-button" src="images/cat-logo.png" onclick="location.href='customize'" />
-			<img class="home-button" src="images/stats-logo.png" onclick="location.href='/checkshelters'" />
-			<a href="https://www.petfinder.com/search/cats-for-adoption/us/ca/san-diego/?distance=10" target="_blank">
-				<img class="home-button" src="images/adopt-logo.png" />
-			</a>
-
-			<button class="home-button" data-toggle="modal" data-target="#myModal">?</button>
-		</div> --}}
 
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog">

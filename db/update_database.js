@@ -1,3 +1,10 @@
+/*
+File: db/update_database.js
+Purpose: The update statements that fix our database of cat images to have the
+heights of ears rather than the distance between the ears. The majority of the
+database is created in db/create_database.js .
+*/
+
 // Node.js + Express server backend for build-a-cat
 // v2 - use SQLite (https://www.sqlite.org/index.html) as a database
 //
