@@ -89,4 +89,4 @@ app.js - This is the web server that allows the user to interact with the applic
 
 
 Final Demo Video:
-[![IMAGE ALT TEXT] (public/images/finalThumbnail.png)] (https://www.youtube.com/watch?v=V6b89_8pl-U&feature=youtu.be)
+https://www.youtube.com/watch?v=V6b89_8pl-U&feature=youtu.be

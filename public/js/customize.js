@@ -185,8 +185,6 @@ $('#doneCustomize').click(() => {
 		success: (data) => {
 			console.log("received cat data, mwahaha", data);
 
-			// document.getElementById('catResults1').innerHTML = '';
-			// document.getElementById('catResults2').innerHTML = '';
 			document.getElementById('photos').innerHTML = '';
 
 			if (data.length >= 0) {

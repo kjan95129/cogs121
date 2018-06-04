@@ -1,10 +1,10 @@
 /*
 File: public/js/collection.js
-Purpose: The corresponding JavaScript file to the Customize page that allows 
+Purpose: The corresponding JavaScript file to the Customize page that allows
 the user input of the color preferences to be stored into Firebase. A counter
 under a specific color is increased every time a user chooses that specific
-color. All of the numbers of the colors are then reflected on a graph on the 
-data visualization page. The graph shows us a real-time visualization of 
+color. All of the numbers of the colors are then reflected on a graph on the
+data visualization page. The graph shows us a real-time visualization of
 what all of the users chose as their preferred cat color.
 */
 
@@ -17,9 +17,6 @@ $(document).ready(() => {
 		console.log("ears are: " + earsApart);
 		console.log("eyes to Mouth are: " + nose_mouthApart);
 		console.log("color are: " + color);
-
-		//database.ref('users/').remove();
-		//console.log("collecting data");
 
 		if (color == "black") {
 			let colorBlack = database.ref('cats/color/black/number');
