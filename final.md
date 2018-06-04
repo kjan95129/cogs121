@@ -7,18 +7,19 @@ Hee Ro Chung:
   Wrote the milestone markdowns
   Worked on cat image manipulation and connected user slider inputs to distances between the cat's facial
   features
+  CSS
   Worked on Firebase structure and used Firebase to store, retrieve, display, and update user preferences on
   their choice of cat fur color in real time through data visualization
 
 Kevin Jan:
-set up, cleaned up, maintained repo
--visual design for all of the pages (CSS stuff)
--navbar & page linking
--set up sqlite for photo storage and retrieval
--connected slider input with sqlite backend & photo retrieval
--color choosing on both front end
--code cleanup and correction for most of front end
--mobile responsiveness
+  Set up, cleaned up, maintained repo
+  Visual design for all of the pages (CSS stuff)
+  Navbar & page linking
+  Set up SQLite for photo storage and retrieval
+  Connected slider input with SQLite backend & photo retrieval
+  Color choosing on both front end
+  Code cleanup and correction for most of front end
+  Mobile responsiveness
 
 
 Sally Lai U:
@@ -59,7 +60,8 @@ db/update_database.js - Update statements that fix cat image database to contain
 public/css/styles.css - All styling components of Build-A-Cat are in this file, making the application
                         aesthetic and user friendly.
 
-public/js/collection.js -
+public/js/collection.js - This file allows user input of color preferences to be stored into Firebase. These
+                          statistics are then displayed on a graph on the data visualization page.
 
 public/js/customize.js - This file corresponds to the Customize page and allows the user inputs to correspond
                         to the responsiveness of the page. User input values on the sliders change in unison
@@ -71,7 +73,7 @@ routes/customize.js - App.js calls this to move to the next page through a GET r
 
 routes/index.js - App.js calls this to move to the next page through a GET request.
 
-views/checkshelters.handlebars -
+views/checkshelters.handlebars - The data visualization is shown on this page in the form of graphs.
 
 views/customize.handlebars -  In charge of the HTML files and components shown on the "Cat Adoption Facts"
                               page. When the user selects his/her desired facial features for a cat, the
@@ -84,3 +86,7 @@ views/index.handlebars - This file is in charge of the HTML files and components
 
 app.js - This is the web server that allows the user to interact with the application through HTTP requests that
           move the user through the various web pages and grab information from the SQLite database.
+
+
+Final Demo Video:
+[![IMAGE ALT TEXT] (public/images/finalThumbnail.png)] (https://www.youtube.com/watch?v=V6b89_8pl-U&feature=youtu.be)
