@@ -7,7 +7,7 @@ Hee Ro Chung:
   Wrote the milestone markdowns
   Worked on cat image manipulation and connected user slider inputs to distances between the cat's facial
   features
-  CSS
+  Worked on css 
   Worked on Firebase structure and used Firebase to store, retrieve, display, and update user preferences on
   their choice of cat fur color in real time through data visualization
 
